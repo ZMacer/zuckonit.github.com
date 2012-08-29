@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/pelican.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-08-27T00:00:00+08:00</updated><entry><title>publish blog with github+markdown+pelican</title><link href="zuckonit.github.com/github_markdown_pelican.html" rel="alternate"></link><updated>2012-08-27T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-27:github_markdown_pelican.html</id><summary type="html">&lt;h1&gt;简单的介绍下这三个"工具"&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2&gt;github page&lt;/h2&gt;
+&lt;p&gt;简单来说github page就是github的一个附件功能，用来搭建个人博客的功能。&lt;br /&gt;
+无限流量，免租服务器，还很geek！！&lt;br /&gt;
+&lt;a href="http://pages.github.com/"&gt;github page官网&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;github&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://hi.baidu.com/lsin30/item/cb13d148011e03f11281da6c"&gt;git 学习笔记&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;what is pelican&lt;/h2&gt;
+&lt;p&gt;pelican 类似jekyll，但是基于python的博客系统，用来搭建github page。&lt;br /&gt;
+由于我用的Ubuntu10.04，安装jekyll的话ruby版本是个问题，要重新编译。&lt;br /&gt;
+作为一个pythoner，果断投入pelican的怀抱&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;安装pelican&lt;/h2&gt;
+&lt;p&gt;由于国内GFW原因，还是下源码自己编译吧 &lt;br /&gt;
+&lt;a href="http://pypi.python.org/pypi/pelican/#downloads"&gt;下载地址&lt;/a&gt; &lt;br /&gt;
+&lt;a href="http://docs.getpelican.com/en/3.0/"&gt;pelican官方教程&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;markdown&lt;/h2&gt;
+&lt;p&gt;markdown 这个就不解释了，自己看教程吧&lt;br /&gt;
+&lt;a href="http://qingbo.net/picky/502-markdown-syntax.html"&gt;markdown 语法&lt;/a&gt;&lt;br /&gt;
+&lt;a href="http://www.ituring.com.cn/article/details/775"&gt;图灵社区markdown教程&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;最后附上详细教程一篇&lt;/h1&gt;
+&lt;p&gt;&lt;a href="http://x-wei.github.com/pelican_github_blog.html"&gt;初步实现&lt;/a&gt;&lt;br /&gt;
+&lt;a href="http://x-wei.github.com/tag/pelican.html"&gt;实用功能&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;</summary><category term="github"></category><category term="markdown"></category><category term="pelican"></category></entry></feed>

@@ -18,20 +18,20 @@
         padding: 9px 0;
       }
 	
+	.tag-0 {
+		font-size: 20pt;
+	}
+	
 	.tag-1 {
-		font-size: 12pt;
+		font-size: 16pt;
 	}
 	
 	.tag-2 {
-		font-size: 11pt;
-	}
-	
-	.tag-3 {
-		font-size: 9pt;
+		font-size: 12pt;
 	}
 
 	.tag-4 {
-		font-size: 7pt;
+		font-size: 8pt;
 	}
 	
     </style>
@@ -59,10 +59,20 @@
   </head>
 
   <body>
-
+    <!-- Baidu Button BEGIN -->
+    <script type="text/javascript" id="bdshare_js" data="type=slide&img=6&pos=right" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+            var bds_config = {"bdTop":289};
+            document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+    </script>
+    <!-- Baidu Button END -->
+    <!-- UJian Button BEGIN -->
+    <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide"></script>
+    <!-- UJian Button END -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -101,10 +111,8 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-
-
         <div class="span9" id="content">
                     
 
@@ -128,7 +136,7 @@
 
 <span class="label">Tags</span> 
 
-	<a href=".././tag/xubuntu1204-y450.html"><i class="icon-tag"></i>xubuntu12.04 y450</a>
+	<a href=".././tag/xubuntu12.04 y450.html"><i class="icon-tag"></i>xubuntu12.04 y450</a>
 
 
 
@@ -153,9 +161,10 @@
 </p>
 <div class="codehilite"><pre>    <span class="n">style</span> &quot;<span class="n">xfdesktop</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">view</span>&quot; <span class="p">{</span>  
     <span class="n">font_name ...</span></pre></div> 
-			<a class="btn primary xsmall" href=".././xubuntu12.04-laptop.html">more >>></a>
+			<a class="btn primary xsmall" href=".././xubuntu12.04-laptop.html">more ...</a>
 		</div>
 	</div>	
+	<hr />
 	
 
 
@@ -179,47 +188,86 @@
 
 
 
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+
+<li>
+<a href=".././category/linux.html">
+    <i class="icon-folder-open icon-large"></i>linux
+</a>
+</li>
+
+<li>
+<a href=".././category/misc.html">
+    <i class="icon-folder-open icon-large"></i>misc
+</a>
+</li>
+
+
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 
-<li class="tag-4">
-    <a href=".././tag/linux.html">
-        <i class="icon-tag icon-large"></i>linux
-    </a>
-</li>
+<span class="tag-4">
+    <a href=".././tag/pelican.html">pelican</a> 
+</span>
+<!-- <i class="icon-tag icon-large"></i> -->
 
-<li class="tag-4">
-    <a href=".././tag/github.html">
-        <i class="icon-tag icon-large"></i>github
-    </a>
-</li>
+<span class="tag-4">
+    <a href=".././tag/xubuntu12.04 y450.html">xubuntu12.04 y450</a> 
+</span>
+<!-- <i class="icon-tag icon-large"></i> -->
 
-<li class="tag-4">
-    <a href=".././tag/markdown.html">
-        <i class="icon-tag icon-large"></i>markdown
-    </a>
-</li>
+<span class="tag-4">
+    <a href=".././tag/linux.html">linux</a> 
+</span>
+<!-- <i class="icon-tag icon-large"></i> -->
 
-<li class="tag-4">
-    <a href=".././tag/xubuntu12.04 y450.html">
-        <i class="icon-tag icon-large"></i>xubuntu12.04 y450
-    </a>
-</li>
+<span class="tag-4">
+    <a href=".././tag/github.html">github</a> 
+</span>
+<!-- <i class="icon-tag icon-large"></i> -->
 
-<li class="tag-4">
-    <a href=".././tag/定制.html">
-        <i class="icon-tag icon-large"></i>定制
-    </a>
-</li>
+<span class="tag-4">
+    <a href=".././tag/定制.html">定制</a> 
+</span>
+<!-- <i class="icon-tag icon-large"></i> -->
 
-<li class="tag-4">
-    <a href=".././tag/pelican.html">
-        <i class="icon-tag icon-large"></i>pelican
-    </a>
-</li>
+<span class="tag-4">
+    <a href=".././tag/markdown.html">markdown</a> 
+</span>
+<!-- <i class="icon-tag icon-large"></i> -->
+
+<br>
+<br>
 
 
 
+<li class="nav-header"><h4><i class="icon-search"></i>Google Search</h4></li>
+<div id="cse" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1');
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '014678369918099370328:3esrcq6pd7y ', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+    customSearchControl.draw('cse');
+  }, true);
+</script>
+<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 
+
+
+    
+<div class="jiathis_style_32x32">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_kaixin001"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+
+<iframe frameborder="0" scrolling="no" src="http://show.v.t.qq.com/index.php?c=show&a=index&n=young-90&w=0&h=498&fl=2&l=30&o=17&co=2" width="100%" height="498"></iframe>
 
 
 </ul>
@@ -227,12 +275,16 @@
 
       </div><!--/row-->
 
+      <hr>
 
       <footer>
         <address id="about">
-        版权声明: 本站所有原创作品均采用 署名-非商业性使用-相同方式共享。
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+				which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
         </address><!-- /#about -->
 
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>, 
+		   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
       </footer>
 
     </div><!--/.fluid-container-->
