@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>When I gone</title><link>zuckonit.github.com/</link><description></description><atom:link href="zuckonit.github.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 30 Aug 2012 09:58:00 +0800</lastBuildDate><item><title>shell学习笔记</title><link>zuckonit.github.com/shell_note.html</link><description>&lt;h2&gt;Shell 笔记&lt;/h2&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>When I gone</title><link>zuckonit.github.com/</link><description></description><atom:link href="zuckonit.github.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 30 Aug 2012 10:52:00 +0800</lastBuildDate><item><title>See you lazymonkey</title><link>zuckonit.github.com/see_you_monkey.html</link><description>&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Monkey" src="./images/misc/monkey/monkey.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mocker</dc:creator><pubDate>Thu, 30 Aug 2012 10:52:00 +0800</pubDate><guid>tag:zuckonit.github.com,2012-08-30:see_you_monkey.html</guid><category>monkey</category><category>brother</category></item><item><title>shell学习笔记</title><link>zuckonit.github.com/shell_note.html</link><description>&lt;h2&gt;Shell 笔记&lt;/h2&gt;
 &lt;p&gt;Where there is a shell , there is a way!!&lt;br /&gt;
 &lt;img alt="Cool" src="./images/shell/shell_note/longmao.png" /&gt;&lt;br /&gt;
 &lt;/p&gt;
