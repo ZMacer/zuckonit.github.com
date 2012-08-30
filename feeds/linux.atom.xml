@@ -14,14 +14,14 @@
 &lt;h1&gt;定制ISO&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;定制前最好把系统多余到软件包什么的都删了，需要到软件保留。&lt;/em&gt;  &lt;br /&gt;
 直接看截图吧：&lt;br /&gt;
-&lt;img alt="打开Remastersys" src="./images/linux_custom/open.png" /&gt;&lt;br /&gt;
+&lt;img alt="打开Remastersys" src="./images/linux/linux_custom/open.png" /&gt;&lt;br /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img alt="选择" src="./images/linux_custom/choose.png" /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img alt="选择" src="./images/linux/linux_custom/choose.png" /&gt;&lt;br /&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img alt="确定" src="./images/linux_custom/sure.png" /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img alt="确定" src="./images/linux/linux_custom/sure.png" /&gt;&lt;br /&gt;
 &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;最后生成到iso文件在/home/remastersys/remastersys 里面&lt;br /&gt;
 拷贝出来后，可清理。&lt;br /&gt;
-&lt;img alt="清理" src="./images/linux_custom/clean.png" /&gt;&lt;br /&gt;
+&lt;img alt="清理" src="./images/linux/linux_custom/clean.png" /&gt;&lt;br /&gt;
 &lt;/p&gt;</summary><category term="linux"></category><category term="定制"></category></entry></feed>
