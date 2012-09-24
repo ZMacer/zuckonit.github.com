@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/all.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-08-30T10:52:00+08:00</updated><entry><title>See you lazymonkey</title><link href="zuckonit.github.com/see_you_monkey.html" rel="alternate"></link><updated>2012-08-30T10:52:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:see_you_monkey.html</id><summary type="html">&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/all.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-09-24T00:00:00+08:00</updated><entry><title>++age</title><link href="zuckonit.github.com/birthday.html" rel="alternate"></link><updated>2012-09-24T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-24:birthday.html</id><summary type="html">&lt;h1&gt;Today is my birthday&lt;/h1&gt;
+&lt;h2&gt;&lt;code&gt;++age&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;人生的十字路口渐渐到来。人越大，责任越多，烦恼越多，需要考虑的事情也越来越多。&lt;br /&gt;
+需要有足够的勇气走下去，Eerything will be ok！！！&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;What's more , no more!!!&lt;/p&gt;</summary><category term="birthday"></category><category term="today"></category></entry><entry><title>See you lazymonkey</title><link href="zuckonit.github.com/see_you_monkey.html" rel="alternate"></link><updated>2012-08-30T10:52:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:see_you_monkey.html</id><summary type="html">&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img alt="Monkey" src="./images/misc/monkey/monkey.png" /&gt;&lt;/p&gt;</summary><category term="monkey"></category><category term="brother"></category></entry><entry><title>shell学习笔记</title><link href="zuckonit.github.com/shell_note.html" rel="alternate"></link><updated>2012-08-30T09:58:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:shell_note.html</id><summary type="html">&lt;h2&gt;Shell 笔记&lt;/h2&gt;
 &lt;p&gt;Where there is a shell , there is a way!!&lt;br /&gt;

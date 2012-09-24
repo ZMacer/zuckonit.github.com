@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>When I gone</title><link>zuckonit.github.com/</link><description></description><atom:link href="zuckonit.github.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 30 Aug 2012 10:52:00 +0800</lastBuildDate><item><title>See you lazymonkey</title><link>zuckonit.github.com/see_you_monkey.html</link><description>&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>When I gone</title><link>zuckonit.github.com/</link><description></description><atom:link href="zuckonit.github.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 24 Sep 2012 00:00:00 +0800</lastBuildDate><item><title>++age</title><link>zuckonit.github.com/birthday.html</link><description>&lt;h1&gt;Today is my birthday&lt;/h1&gt;
+&lt;h2&gt;&lt;code&gt;++age&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;人生的十字路口渐渐到来。人越大，责任越多，烦恼越多，需要考虑的事情也越来越多。&lt;br /&gt;
+需要有足够的勇气走下去，Eerything will be ok！！！&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;What's more , no more!!!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mocker</dc:creator><pubDate>Mon, 24 Sep 2012 00:00:00 +0800</pubDate><guid>tag:zuckonit.github.com,2012-09-24:birthday.html</guid><category>birthday</category><category>today</category></item><item><title>See you lazymonkey</title><link>zuckonit.github.com/see_you_monkey.html</link><description>&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img alt="Monkey" src="./images/misc/monkey/monkey.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mocker</dc:creator><pubDate>Thu, 30 Aug 2012 10:52:00 +0800</pubDate><guid>tag:zuckonit.github.com,2012-08-30:see_you_monkey.html</guid><category>monkey</category><category>brother</category></item><item><title>shell学习笔记</title><link>zuckonit.github.com/shell_note.html</link><description>&lt;h2&gt;Shell 笔记&lt;/h2&gt;
 &lt;p&gt;Where there is a shell , there is a way!!&lt;br /&gt;

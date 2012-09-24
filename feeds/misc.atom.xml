@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/misc.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-08-30T10:52:00+08:00</updated><entry><title>See you lazymonkey</title><link href="zuckonit.github.com/see_you_monkey.html" rel="alternate"></link><updated>2012-08-30T10:52:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:see_you_monkey.html</id><summary type="html">&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/misc.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-09-24T00:00:00+08:00</updated><entry><title>++age</title><link href="zuckonit.github.com/birthday.html" rel="alternate"></link><updated>2012-09-24T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-24:birthday.html</id><summary type="html">&lt;h1&gt;Today is my birthday&lt;/h1&gt;
+&lt;h2&gt;&lt;code&gt;++age&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;人生的十字路口渐渐到来。人越大，责任越多，烦恼越多，需要考虑的事情也越来越多。&lt;br /&gt;
+需要有足够的勇气走下去，Eerything will be ok！！！&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;What's more , no more!!!&lt;/p&gt;</summary><category term="birthday"></category><category term="today"></category></entry><entry><title>See you lazymonkey</title><link href="zuckonit.github.com/see_you_monkey.html" rel="alternate"></link><updated>2012-08-30T10:52:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:see_you_monkey.html</id><summary type="html">&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img alt="Monkey" src="./images/misc/monkey/monkey.png" /&gt;&lt;/p&gt;</summary><category term="monkey"></category><category term="brother"></category></entry><entry><title>xubuntu12.04 折腾记</title><link href="zuckonit.github.com/xubuntu12.04-laptop.html" rel="alternate"></link><updated>2012-08-28T22:51:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-28:xubuntu12.04-laptop.html</id><summary type="html">&lt;h2&gt;折腾来由&lt;/h2&gt;
 &lt;p&gt;本人持有y450，俗称小y。y恰好是姓氏到第一个字母。当然，这跟我当初为什么买小y没有一毛钱到关系。&lt;br /&gt;
