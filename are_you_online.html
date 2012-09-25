@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>whether your QQ is online - When I gone</title>	
+	<meta name="author" content="Mocker">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+	
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700,400|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
+		
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	
+	
+	
+	<link href="./" type="application/atom+xml" rel="alternate" title="When I gone ATOM Feed" />
+	
+	<link href="./feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="When I gone RSS Feed" />
+	
+</head>
+	
+<body>		
+	<header class="clearfix" role="banner">
+		<div class="wrapper">
+			<h1 class="huge"><a href=".">When I gone</a></h1>
+		</div>
+	</header>
+	
+	
+<div role="main" class="content clearfix">	
+	<article>
+		<div class="post wrapper">
+			<h1>whether your QQ is online</h1>
+			<hr />
+<h2>Why I write such script</h2>
+<ul>
+<li>this is for conky</li>
+<li>this is for my furture gf</li>
+</ul>
+<hr />
+<h2>Code</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">#!/bin/bash</span>
+<span class="c">#=============================================================================</span>
+<span class="c">#     FileName: qqonline.sh</span>
+<span class="c">#         Desc: judge whether the qq is online or not</span>
+<span class="c">#       Author: Mocker</span>
+<span class="c">#        Email: Zuckerwooo@gmail.com</span>
+<span class="c">#     HomePage: zuckonit.github.com</span>
+<span class="c">#      Version: 0.0.1</span>
+<span class="c">#   LastChange: 2012-09-25 15:14:33</span>
+<span class="c">#      History:</span>
+<span class="c">#=============================================================================</span>
+
+<span class="nv">url</span><span class="o">=</span><span class="s2">&quot;http://wpa.qq.com/pa?p=1:$1:1&quot;</span>
+<span class="nv">size</span><span class="o">=</span><span class="sb">`</span>curl -I <span class="nv">$url</span> | grep Content-Length | awk -F<span class="s1">&#39;:&#39;</span> <span class="s1">&#39;{printf&quot;%d&quot;,$2}&#39;</span><span class="sb">`</span>
+
+<span class="nv">file_online</span><span class="o">=</span>/tmp/qqonline
+<span class="nv">file_offline</span><span class="o">=</span>/tmp/qqoffline
+
+<span class="sb">`</span>rm -f <span class="nv">$file_online</span> &amp;&gt;&gt; /dev/null<span class="sb">`</span>
+<span class="sb">`</span>touch <span class="nv">$file_offline</span> &amp;&gt;&gt; /dev/null<span class="sb">`</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$size</span> -eq 2329 <span class="o">]</span>; <span class="k">then</span>
+    <span class="sb">`</span>mv <span class="nv">$file_offline</span> <span class="nv">$file_online</span> &gt;&gt; /dev/null<span class="sb">`</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="nv">$size</span> -eq 2262 <span class="o">]</span>; <span class="k">then</span>
+    <span class="sb">`</span>mv <span class="nv">$file_online</span> <span class="nv">$file_offline</span> &gt;&gt; /dev/null<span class="sb">`</span>
+<span class="k">fi</span>
+
+<span class="nb">exit </span>0
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2>Why I not use python,but shell</h2>
+<p>作为一个pythoner,想实现这个功能时，首先想到的是用python。但在使用coky的过程中，<br />
+我发现conky在我设定的时间周期内调用python解释器，相比shell脚本消耗了更多的资源，<br />
+反正会写shell脚本，当练练手了，果断有了这个shell版本.<br />
+</p>
+<hr />
+<h2>Screenshot</h2>
+<p><img alt="Screenshot" src="static/images/shell/are_you_online/conky.png" /></p>
+			
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						
+			
+			<div class="comments">
+			<h2>Comments !</h2>
+			    <div id="disqus_thread"></div>
+			    <script type="text/javascript">
+			       var disqus_identifier = "are_you_online.html";
+			       (function() {
+			       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			       dsq.src = 'http://binlife.disqus.com/embed.js';
+			       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			      })();
+			    </script>
+			</div>
+						
+		</div>
+	
+	<div class="meta wrapper">
+	<time datetime="2012-09-25T00:00:00" pubdate>二 25 九月 2012</time>
+	<ul class="tag clearfix">
+		<li><a href="./category/shell.html">shell</a></li>
+
+	
+		<li><a href="./tag/shell.html">shell</a></li>
+	
+		<li><a href="./tag/conky.html">conky</a></li>
+	
+
+	</ul>
+	
+</div>
+	</article>	
+</div>
+
+	
+		
+<footer class="clearfix">
+	<div class="wrapper pages">
+		<ul class="nav">
+		
+			<li><a href="./archives.html">Archive</a></li>
+		</ul>
+	</div>
+	
+	<div class="copy wrapper">
+		<ul class="social">
+			
+			<li><a href="https://github.com/Zuckonit">github</a></li>
+			
+			<li><a href="https://plus.google.com/u/0/111312737570320393101">google+</a></li>
+			
+		</ul>
+	
+		<p role="contentinfo">© 2012 Mocker<br>
+		Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">Pelican</a>.</p>
+	</div>
+</footer>
+	
+	<script>
+	  var _gaq=[['_setAccount',''],['_trackPageview']];
+	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+</html>
