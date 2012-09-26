@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>When I gone</title><link>zuckonit.github.com/</link><description></description><atom:link href="zuckonit.github.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Sep 2012 00:00:00 +0800</lastBuildDate><item><title>whether your QQ is online</title><link>zuckonit.github.com/are_you_online.html</link><description>&lt;hr /&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>When I gone</title><link>zuckonit.github.com/</link><description></description><atom:link href="zuckonit.github.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 26 Sep 2012 00:00:00 +0800</lastBuildDate><item><title>awalys with me</title><link>zuckonit.github.com/always_with-me.html</link><description>&lt;pre&gt;
+&lt;embed src="http://player.youku.com/player.php/sid/XMjQ4OTAzNTQ4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"&gt;&lt;/embed&gt;
+&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mocker</dc:creator><pubDate>Wed, 26 Sep 2012 00:00:00 +0800</pubDate><guid>tag:zuckonit.github.com,2012-09-26:always_with-me.html</guid><category>music</category><category>宫崎骏</category></item><item><title>whether your QQ is online</title><link>zuckonit.github.com/are_you_online.html</link><description>&lt;hr /&gt;
 &lt;h2&gt;Why I write such script&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;this is for conky&lt;/li&gt;
