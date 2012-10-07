@@ -55,16 +55,16 @@
 <code>vim ~/.gtk-2.0.rc</code><br />
 写入一下内容<br />
 </p>
-<div class="codehilite"><pre>    <span class="n">style</span> &quot;<span class="n">xfdesktop</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">view</span>&quot; <span class="p">{</span>  
-    <span class="n">font_name</span> <span class="p">=</span> &quot;<span class="n">sans</span> <span class="n">Bold</span>&quot;         #字体名称设置  
-    <span class="n">XfdesktopIconView</span><span class="p">::</span><span class="n">label</span><span class="o">-</span><span class="n">alpha</span> <span class="p">=</span> 10 #透明度设置  
-    <span class="n">base</span><span class="p">[</span><span class="n">NORMAL</span><span class="p">]</span> <span class="p">=</span> &quot;#000000&quot;        #背景颜色<span class="p">(</span>下同<span class="p">)</span>  
-    <span class="n">base</span><span class="p">[</span><span class="n">SELECTED</span><span class="p">]</span> <span class="p">=</span> &quot;#71<span class="n">B9FF</span>&quot;  
-    <span class="n">base</span><span class="p">[</span><span class="n">ACTIVE</span><span class="p">]</span> <span class="p">=</span> &quot;#71<span class="n">FFAD</span>&quot;  
-    <span class="n">fg</span><span class="p">[</span><span class="n">NORMAL</span><span class="p">]</span> <span class="p">=</span> &quot;#<span class="n">ffffff</span>&quot;          #文字颜色<span class="p">(</span>下同<span class="p">)</span>  
-    <span class="n">fg</span><span class="p">[</span><span class="n">SELECTED</span><span class="p">]</span> <span class="p">=</span> &quot;#71<span class="n">B9FF</span>&quot;  
-    <span class="n">fg</span><span class="p">[</span><span class="n">ACTIVE</span><span class="p">]</span> <span class="p">=</span> &quot;#71<span class="n">FFAD</span>&quot; <span class="p">}</span>  
-    <span class="n">widget_class</span> &quot;<span class="o">*</span><span class="n">XfdesktopIconView</span><span class="o">*</span>&quot; <span class="n">style</span> &quot;<span class="n">xfdesktop</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">view</span>&quot;  
+<div class="codehilite"><pre>    <span class="n">style</span> <span class="s">&quot;xfdesktop-icon-view&quot;</span> <span class="p">{</span>  
+    <span class="n">font_name</span> <span class="o">=</span> <span class="s">&quot;sans Bold&quot;</span>         <span class="c1">#字体名称设置  </span>
+    <span class="nn">XfdesktopIconView::</span><span class="n">label</span><span class="o">-</span><span class="n">alpha</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1">#透明度设置  </span>
+    <span class="n">base</span><span class="p">[</span><span class="n">NORMAL</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;#000000&quot;</span>        <span class="c1">#背景颜色(下同)  </span>
+    <span class="n">base</span><span class="p">[</span><span class="n">SELECTED</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;#71B9FF&quot;</span>  
+    <span class="n">base</span><span class="p">[</span><span class="n">ACTIVE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;#71FFAD&quot;</span>  
+    <span class="n">fg</span><span class="p">[</span><span class="n">NORMAL</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;#ffffff&quot;</span>          <span class="c1">#文字颜色(下同)  </span>
+    <span class="n">fg</span><span class="p">[</span><span class="n">SELECTED</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;#71B9FF&quot;</span>  
+    <span class="n">fg</span><span class="p">[</span><span class="n">ACTIVE</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;#71FFAD&quot;</span> <span class="p">}</span>  
+    <span class="n">widget_class</span> <span class="s">&quot;*XfdesktopIconView*&quot;</span> <span class="n">style</span> <span class="s">&quot;xfdesktop-icon-view&quot;</span>  
 </pre></div>
 
 
@@ -94,8 +94,8 @@ xfce4 没有gdm<br />
 最后生成下配置文件:sudo nvidia-xconfig<br />
 重启xserver：sudo service lightdm start</p>
 <h3>.thunar启动慢</h3>
-<div class="codehilite"><pre>    <span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">gvfs</span><span class="o">/</span><span class="n">mounts</span><span class="o">/</span><span class="n">network</span><span class="p">.</span><span class="n">mount</span>  
-    更改<span class="n">AutoMount</span><span class="p">=</span><span class="n">false</span>  
+<div class="codehilite"><pre>    <span class="n">sudo</span> <span class="n">vim</span> <span class="sr">/usr/s</span><span class="n">hare</span><span class="sr">/gvfs/mo</span><span class="n">unts</span><span class="o">/</span><span class="n">network</span><span class="o">.</span><span class="n">mount</span>  
+    <span class="err">更改</span><span class="n">AutoMount</span><span class="o">=</span><span class="n">false</span>  
 </pre></div>
 
 
@@ -156,10 +156,6 @@ xfce4 没有gdm<br />
 	
 	<div class="copy wrapper">
 		<ul class="social">
-			
-			<li><a href="https://github.com/Zuckonit">github</a></li>
-			
-			<li><a href="https://plus.google.com/u/0/111312737570320393101">google+</a></li>
 			
 		</ul>
 	
