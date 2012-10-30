@@ -114,6 +114,13 @@
 interfaces for further functions,some functions may be useful.....maybe.&lt;/p&gt;
 &lt;h2&gt;usage&lt;/h2&gt;
 &lt;hr /&gt;
+&lt;p&gt;things look like this:&lt;br /&gt;
+you write your notes diary or something else in vim,&lt;br /&gt;
+the first line is the note folder in gmail&lt;br /&gt;
+so,you'd better write sth meaningful in the first line&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;then..........&lt;br /&gt;
+&lt;/p&gt;
 &lt;p&gt;just :call Gnote()&lt;br /&gt;
 or just bind a key for that,things will look like easy - -*&lt;/p&gt;
 &lt;hr /&gt;
