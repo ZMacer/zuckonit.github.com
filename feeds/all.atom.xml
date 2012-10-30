@@ -5,7 +5,7 @@
 &lt;li&gt;ever I used a app called gnote on android,which is used for noting&lt;/li&gt;
 &lt;li&gt;these days I am learning something,I note in my vim&lt;/li&gt;
 &lt;li&gt;I wanna sync my note with some online account of myself&lt;/li&gt;
-&lt;li&gt;I love product of google,that's why I choose gmail,not sth else&lt;/li&gt;
+&lt;li&gt;I love the products of google,that's why I choose gmail,not sth else&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2&gt;part of code&lt;/h2&gt;
@@ -115,7 +115,7 @@ interfaces for further functions,some functions may be useful.....maybe.&lt;/p&g
 &lt;h2&gt;usage&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;things look like this:&lt;br /&gt;
-you write your notes diary or something else in vim,&lt;br /&gt;
+you write your notes,diary or something else in vim,&lt;br /&gt;
 the first line is the note folder in gmail&lt;br /&gt;
 so,you'd better write sth meaningful in the first line&lt;br /&gt;
 &lt;/p&gt;
