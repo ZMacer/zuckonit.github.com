@@ -27,16 +27,16 @@
 &lt;code&gt;vim ~/.gtk-2.0.rc&lt;/code&gt;&lt;br /&gt;
 写入一下内容&lt;br /&gt;
 &lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;style&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xfdesktop-icon-view&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
-    &lt;span class="n"&gt;font_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;sans Bold&amp;quot;&lt;/span&gt;         &lt;span class="c1"&gt;#字体名称设置  &lt;/span&gt;
-    &lt;span class="nn"&gt;XfdesktopIconView::&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="c1"&gt;#透明度设置  &lt;/span&gt;
-    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NORMAL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#000000&amp;quot;&lt;/span&gt;        &lt;span class="c1"&gt;#背景颜色(下同)  &lt;/span&gt;
-    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;SELECTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71B9FF&amp;quot;&lt;/span&gt;  
-    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ACTIVE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71FFAD&amp;quot;&lt;/span&gt;  
-    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NORMAL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;          &lt;span class="c1"&gt;#文字颜色(下同)  &lt;/span&gt;
-    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;SELECTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71B9FF&amp;quot;&lt;/span&gt;  
-    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ACTIVE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71FFAD&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;  
-    &lt;span class="n"&gt;widget_class&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;*XfdesktopIconView*&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xfdesktop-icon-view&amp;quot;&lt;/span&gt;  
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;style&lt;/span&gt; &amp;quot;&lt;span class="n"&gt;xfdesktop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;icon&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;view&lt;/span&gt;&amp;quot; &lt;span class="p"&gt;{&lt;/span&gt;  
+    &lt;span class="n"&gt;font_name&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;quot;&lt;span class="n"&gt;sans&lt;/span&gt; &lt;span class="n"&gt;Bold&lt;/span&gt;&amp;quot;         #字体名称设置  
+    &lt;span class="n"&gt;XfdesktopIconView&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; 10 #透明度设置  
+    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NORMAL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;quot;#000000&amp;quot;        #背景颜色&lt;span class="p"&gt;(&lt;/span&gt;下同&lt;span class="p"&gt;)&lt;/span&gt;  
+    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;SELECTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;quot;#71&lt;span class="n"&gt;B9FF&lt;/span&gt;&amp;quot;  
+    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ACTIVE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;quot;#71&lt;span class="n"&gt;FFAD&lt;/span&gt;&amp;quot;  
+    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NORMAL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;quot;#&lt;span class="n"&gt;ffffff&lt;/span&gt;&amp;quot;          #文字颜色&lt;span class="p"&gt;(&lt;/span&gt;下同&lt;span class="p"&gt;)&lt;/span&gt;  
+    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;SELECTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;quot;#71&lt;span class="n"&gt;B9FF&lt;/span&gt;&amp;quot;  
+    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ACTIVE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;quot;#71&lt;span class="n"&gt;FFAD&lt;/span&gt;&amp;quot; &lt;span class="p"&gt;}&lt;/span&gt;  
+    &lt;span class="n"&gt;widget_class&lt;/span&gt; &amp;quot;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;XfdesktopIconView&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&amp;quot; &lt;span class="n"&gt;style&lt;/span&gt; &amp;quot;&lt;span class="n"&gt;xfdesktop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;icon&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;view&lt;/span&gt;&amp;quot;  
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -66,8 +66,8 @@ xfce4 没有gdm&lt;br /&gt;
 最后生成下配置文件:sudo nvidia-xconfig&lt;br /&gt;
 重启xserver：sudo service lightdm start&lt;/p&gt;
 &lt;h3&gt;.thunar启动慢&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="sr"&gt;/usr/s&lt;/span&gt;&lt;span class="n"&gt;hare&lt;/span&gt;&lt;span class="sr"&gt;/gvfs/mo&lt;/span&gt;&lt;span class="n"&gt;unts&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mount&lt;/span&gt;  
-    &lt;span class="err"&gt;更改&lt;/span&gt;&lt;span class="n"&gt;AutoMount&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;false&lt;/span&gt;  
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gvfs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mounts&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mount&lt;/span&gt;  
+    更改&lt;span class="n"&gt;AutoMount&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;false&lt;/span&gt;  
 &lt;/pre&gt;&lt;/div&gt;
 
 
