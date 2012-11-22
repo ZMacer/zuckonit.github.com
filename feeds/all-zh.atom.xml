@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/all-zh.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-11-11T00:00:00+08:00</updated><entry><title>1111111111</title><link href="zuckonit.github.com/1111111111.html" rel="alternate"></link><updated>2012-11-11T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-11-11:1111111111.html</id><summary type="html">&lt;h2&gt;Single Day&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/all-zh.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-11-22T00:00:00+08:00</updated><entry><title>ubuntu_lamp</title><link href="zuckonit.github.com/ubuntu_lamp.html" rel="alternate"></link><updated>2012-11-22T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-11-22:ubuntu_lamp.html</id><summary type="html">&lt;h2&gt;What is LAMP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux Apache Mysql Php&lt;/li&gt;
+&lt;li&gt;it is a free web developing environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;How to install lamp in ubuntu&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;tasksel&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;lamp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Yeah, believe your eyes, it is just so easy to install lamp in ubuntu.&lt;br /&gt;
+During the process, which will let you set the root password of mysql.&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Whether your installation is successful&lt;/h2&gt;
+&lt;p&gt;*Test apache
+open such link in your browser:&lt;br /&gt;
+&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;you will see:&lt;br /&gt;
+&lt;img alt="apache" src="./images/linux/lamp/test_apache.png" /&gt;&lt;/p&gt;
+&lt;p&gt;*Test php
+add test.php&lt;br /&gt;
+&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;sudo&lt;/span&gt; &lt;span class="nx"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="nb"&gt;phpinfo&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;/var/www/test.php&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;restart apache&lt;br /&gt;
+&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;open such link in your browser:&lt;br /&gt;
+&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;you will see:&lt;br /&gt;
+&lt;img alt="php" src="./images/linux/lamp/test_php.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Then, just enjoy it:)&lt;br /&gt;
+&lt;/p&gt;</summary><category term="ubuntu"></category><category term="lamp"></category></entry><entry><title>1111111111</title><link href="zuckonit.github.com/1111111111.html" rel="alternate"></link><updated>2012-11-11T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-11-11:1111111111.html</id><summary type="html">&lt;h2&gt;Single Day&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;wiki time &lt;a href="http://baike.baidu.com/view/23105.htm?fr=ala0_1_1"&gt;光棍节&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;oh, shit! 没了！&lt;/li&gt;
