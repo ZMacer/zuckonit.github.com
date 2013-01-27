@@ -20,7 +20,7 @@ Seems that there's a little trouble under windows, but I am not fucking care abo
 &lt;/ul&gt;
 &lt;h2&gt;Screenshots (weather only)&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt="weatherlike" src=".images/python/libnotify/weather.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="weatherlike" src="./images/python/libnotify/weather.png" /&gt;&lt;/p&gt;
 &lt;h2&gt;Code of main part&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
