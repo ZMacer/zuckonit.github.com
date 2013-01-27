@@ -88,13 +88,13 @@
 <span class="nv">file_online</span><span class="o">=</span>/tmp/qqonline
 <span class="nv">file_offline</span><span class="o">=</span>/tmp/qqoffline
 
-<span class="sb">`</span>rm -f <span class="nv">$file_online</span> &amp;&gt;&gt; /dev/null<span class="sb">`</span>
-<span class="sb">`</span>touch <span class="nv">$file_offline</span> &amp;&gt;&gt; /dev/null<span class="sb">`</span>
+rm -f <span class="nv">$file_online</span> &amp;&gt;&gt; /dev/null
+touch <span class="nv">$file_offline</span> &amp;&gt;&gt; /dev/null
 
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$size</span> -eq 2329 <span class="o">]</span>; <span class="k">then</span>
-    <span class="sb">`</span>mv <span class="nv">$file_offline</span> <span class="nv">$file_online</span> &gt;&gt; /dev/null<span class="sb">`</span>
+<span class="k">    </span>mv <span class="nv">$file_offline</span> <span class="nv">$file_online</span> &gt;&gt; /dev/null
 <span class="k">elif</span> <span class="o">[</span> <span class="nv">$size</span> -eq 2262 <span class="o">]</span>; <span class="k">then</span>
-    <span class="sb">`</span>mv <span class="nv">$file_online</span> <span class="nv">$file_offline</span> &gt;&gt; /dev/null<span class="sb">`</span>
+<span class="k">    </span>mv <span class="nv">$file_online</span> <span class="nv">$file_offline</span> &gt;&gt; /dev/null
 <span class="k">fi</span>
 
 <span class="nb">exit </span>0

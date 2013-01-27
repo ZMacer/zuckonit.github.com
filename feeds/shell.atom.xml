@@ -52,13 +52,13 @@
 &lt;span class="nv"&gt;file_online&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/tmp/qqonline
 &lt;span class="nv"&gt;file_offline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/tmp/qqoffline
 
-&lt;span class="sb"&gt;`&lt;/span&gt;rm -f &lt;span class="nv"&gt;$file_online&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt; /dev/null&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;span class="sb"&gt;`&lt;/span&gt;touch &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt; /dev/null&lt;span class="sb"&gt;`&lt;/span&gt;
+rm -f &lt;span class="nv"&gt;$file_online&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt; /dev/null
+touch &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt; /dev/null
 
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$size&lt;/span&gt; -eq 2329 &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
-    &lt;span class="sb"&gt;`&lt;/span&gt;mv &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &lt;span class="nv"&gt;$file_online&lt;/span&gt; &amp;gt;&amp;gt; /dev/null&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;mv &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &lt;span class="nv"&gt;$file_online&lt;/span&gt; &amp;gt;&amp;gt; /dev/null
 &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$size&lt;/span&gt; -eq 2262 &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
-    &lt;span class="sb"&gt;`&lt;/span&gt;mv &lt;span class="nv"&gt;$file_online&lt;/span&gt; &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;gt;&amp;gt; /dev/null&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;mv &lt;span class="nv"&gt;$file_online&lt;/span&gt; &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;gt;&amp;gt; /dev/null
 &lt;span class="k"&gt;fi&lt;/span&gt;
 
 &lt;span class="nb"&gt;exit &lt;/span&gt;0

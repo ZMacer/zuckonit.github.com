@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>Oh My Libnotify - When I gone</title>	
+	<meta name="author" content="Mocker">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+	
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700,400|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
+		
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	
+	
+	
+	<link href="./" type="application/atom+xml" rel="alternate" title="When I gone ATOM Feed" />
+	
+</head>
+	
+<body>		
+	<header class="clearfix" role="banner">
+		<div class="wrapper">
+			<h1 class="huge"><a href=".">When I gone</a></h1>
+		</div>
+	</header>
+	
+	
+<div role="main" class="content clearfix">	
+	<article>
+		<div class="post wrapper">
+			<h1>Oh My Libnotify</h1>
+			<h2>About libnotify</h2>
+<hr />
+<p>libnotify is a bubble top desktop method of notification, many Languages' API are supported. Detail information? I guess archwiki is a good helper: <a href="https://wiki.archlinux.org/index.php/Libnotify">archwiki libnotify</a><br />
+Seems that there's a little trouble under windows, but I am not fucking care about that.<br />
+</p>
+<h2>What to do with libnotify</h2>
+<hr />
+<p>libnotify is just a tool of notification.Ya...notification...let me guess, OMG, which should be good way of reminder..Bingo!!!<br />
+</p>
+<h2>What I do with it</h2>
+<hr />
+<ul>
+<li>weather notify<br />
+</li>
+<li>gmail checker<br />
+</li>
+<li>QQ online?<br />
+</li>
+</ul>
+<h2>Screenshots (weather only)</h2>
+<hr />
+<p><img alt="weatherlike" src="static/.images/python/libnotify/weather.png" /></p>
+<h2>Code of main part</h2>
+<hr />
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="c">#-*- coding:utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">urlparse</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">simplejson</span> <span class="kn">as</span> <span class="nn">json</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">json</span>
+    <span class="n">TIMEOUT</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">def</span> <span class="nf">_gen_link</span><span class="p">(</span><span class="n">base_link</span><span class="p">,</span> <span class="n">zip_code</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base_link</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;http://&#39;</span><span class="p">):</span>
+        <span class="n">base_link</span> <span class="o">=</span> <span class="s">&#39;http://&#39;</span> <span class="o">+</span> <span class="n">base_link</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="n">urlparse</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span><span class="n">base_link</span><span class="p">,</span> <span class="n">zip_code</span> <span class="o">+</span> <span class="s">&#39;.html&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">link</span>
+
+<span class="k">def</span> <span class="nf">_get_json</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+
+    <span class="n">socket</span><span class="o">.</span><span class="n">setdefaulttimeout</span><span class="p">(</span><span class="n">TIMEOUT</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+<span class="k">def</span> <span class="nf">_down_load_img</span><span class="p">(</span><span class="n">base_link</span><span class="p">,</span> <span class="n">save_dir</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="n">save_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">save_dir</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">save_dir</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_dir</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">urlparse</span><span class="o">.</span><span class="n">urljoin</span><span class="p">(</span><span class="n">base_link</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_dir</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">notify</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">icon</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">icon</span><span class="p">)</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s">&#39;notify-send &quot;</span><span class="si">%s</span><span class="s">&quot; &quot;</span><span class="si">%s</span><span class="s">&quot; &quot;--icon=</span><span class="si">%s</span><span class="s">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">icon</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+
+<h3>Then cronjob it</h3>
+<div class="codehilite"><pre>0  <span class="o">*/</span>1  <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>  <span class="n">export</span> <span class="n">DISPLAY</span><span class="p">=:</span>0<span class="p">.</span>0 <span class="o">&amp;&amp;</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mocker</span><span class="o">/</span><span class="p">.</span><span class="n">bin</span><span class="o">/</span><span class="n">cronjobs</span><span class="o">/</span><span class="n">weather</span><span class="p">.</span><span class="n">py</span>
+</pre></div>
+
+
+<p>cause cronjob use different evironment with your shell, so...export DISPLAY=:0.0
+required<br />
+</p>
+<p>enjoy it!!!<br />
+</p>
+			
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						
+			
+			<div class="comments">
+			<h2>Comments !</h2>
+			    <div id="disqus_thread"></div>
+			    <script type="text/javascript">
+			       var disqus_identifier = "libnotify.html";
+			       (function() {
+			       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			       dsq.src = 'http://binlife.disqus.com/embed.js';
+			       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			      })();
+			    </script>
+			</div>
+						
+		</div>
+	
+	<div class="meta wrapper">
+	<time datetime="2013-01-27T00:00:00" pubdate> 1月 27 2013</time>
+	<ul class="tag clearfix">
+		<li><a href="./category/python.html">python</a></li>
+
+	
+		<li><a href="./tag/notify.html">notify</a></li>
+	
+		<li><a href="./tag/python.html">python</a></li>
+	
+
+	</ul>
+	
+</div>
+	</article>	
+</div>
+
+	
+		
+<footer class="clearfix">
+	<div class="wrapper pages">
+		<ul class="nav">
+		
+			<li><a href="./archives.html">Archive</a></li>
+		</ul>
+	</div>
+	
+	<div class="copy wrapper">
+		<ul class="social">
+			
+		</ul>
+	
+		<p role="contentinfo">© 2012 Mocker<br>
+		Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">Pelican</a>.</p>
+	</div>
+</footer>
+	
+	<script>
+	  var _gaq=[['_setAccount',''],['_trackPageview']];
+	  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+</html>
