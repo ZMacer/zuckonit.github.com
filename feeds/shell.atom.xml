@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/shell.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-09-25T00:00:00+08:00</updated><entry><title>whether your QQ is online</title><link href="zuckonit.github.com/are_you_online.html" rel="alternate"></link><updated>2012-09-25T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-25:are_you_online.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/shell.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-09-25T00:00:00+08:00</updated><entry><title>whether your QQ is online</title><link href="zuckonit.github.com/are_you_online.html" rel="alternate"></link><updated>2012-09-25T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-25:are_you_online.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;Why I write such script&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;this is for conky&lt;/li&gt;

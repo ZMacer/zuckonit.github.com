@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/linux.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-11-22T00:00:00+08:00</updated><entry><title>ubuntu_lamp</title><link href="zuckonit.github.com/ubuntu_lamp.html" rel="alternate"></link><updated>2012-11-22T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-11-22:ubuntu_lamp.html</id><summary type="html">&lt;h2&gt;What is LAMP&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/linux.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-11-22T00:00:00+08:00</updated><entry><title>ubuntu_lamp</title><link href="zuckonit.github.com/ubuntu_lamp.html" rel="alternate"></link><updated>2012-11-22T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-11-22:ubuntu_lamp.html</id><summary type="html">&lt;h2&gt;What is LAMP&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Linux Apache Mysql Php&lt;/li&gt;
 &lt;li&gt;it is a free web developing environment&lt;/li&gt;

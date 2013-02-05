@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/vim.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-10-21T00:00:00+08:00</updated><entry><title>Send Your Note to Your Gmail</title><link href="zuckonit.github.com/gnote.vim.html" rel="alternate"></link><updated>2012-10-21T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-10-21:gnote.vim.html</id><summary type="html">&lt;h2&gt;why I write such vim plugin&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/vim.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-10-21T00:00:00+08:00</updated><entry><title>Send Your Note to Your Gmail</title><link href="zuckonit.github.com/gnote.vim.html" rel="alternate"></link><updated>2012-10-21T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-10-21:gnote.vim.html</id><summary type="html">&lt;h2&gt;why I write such vim plugin&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;ever I used a app called gnote on android,which is used for noting&lt;/li&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/go.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2013-02-05T00:00:00+08:00</updated><entry><title>Let's go</title><link href="zuckonit.github.com/letsgo.html" rel="alternate"></link><updated>2013-02-05T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-02-05:letsgo.html</id><summary type="html">&lt;pre&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/go.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2013-02-05T00:00:00+08:00</updated><entry><title>Let's go</title><link href="zuckonit.github.com/letsgo.html" rel="alternate"></link><updated>2013-02-05T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-02-05:letsgo.html</id><summary type="html">&lt;pre&gt;
 &lt;embed src="http://player.opengg.me/player.php/sid/XMTY4Mzk5NTc2/v.swf"
 quality="high" width="480" height="400" align="middle"
 allowScriptAccess="sameDomain" allowFullscreen="true"
