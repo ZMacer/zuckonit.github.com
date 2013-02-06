@@ -170,7 +170,7 @@ Seems that there's a little trouble under windows, but I am not fucking care abo
 </td></tr></table>
 
 <h3>Then cronjob it</h3>
-<div class="codehilite"><pre>0  <span class="o">*/</span>1  <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>  <span class="n">export</span> <span class="n">DISPLAY</span><span class="p">=:</span>0<span class="p">.</span>0 <span class="o">&amp;&amp;</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mocker</span><span class="o">/</span><span class="p">.</span><span class="n">bin</span><span class="o">/</span><span class="n">cronjobs</span><span class="o">/</span><span class="n">weather</span><span class="p">.</span><span class="n">py</span>
+<div class="codehilite"><pre><span class="mi">0</span>  <span class="o">*</span><span class="sr">/1  * * *  export DISPLAY=:0.0 &amp;&amp; /</span><span class="n">home</span><span class="sr">/mocker/</span><span class="o">.</span><span class="n">bin</span><span class="sr">/cronjobs/</span><span class="n">weather</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 
 
@@ -227,14 +227,15 @@ required<br />
     </div>
 
     <div class="copy wrapper">
-        <p></p>
-        <a href="http://weibo.com/zuckonit"><img src="./static/contacts/Weibo.png" title="Weibo"/></a>
+        <!--modified by Mocker-->
+        <p>
+        <a href="http://weibo.com/zuckonit"><img src="/static/contacts/Weibo.png" title="Weibo"/></a>
         
-        <a href="https://github.com/Zuckonit"><img src="./static/contacts/Github.png" title="Github"/></a>
+        <a href="https://github.com/Zuckonit"><img src="/static/contacts/Github.png" title="Github"/></a>
         
-        <a href="https://plus.google.com/u/0/111312737570320393101"><img src="./static/contacts/G+.png" title="G+"/></a>
+        <a href="https://plus.google.com/u/0/111312737570320393101"><img src="/static/contacts/G+.png" title="G+"/></a>
         
-        <a href="https://www.facebook.com/zuckor.siner"><img src="./static/contacts/Facebook.png" title="Facebook"/></a>
+        <a href="https://www.facebook.com/zuckor.siner"><img src="/static/contacts/Facebook.png" title="Facebook"/></a>
         </p>
         <p role="contentinfo">© 2012 Mocker<br>
         Proudly powered by @Zuckonit</a>.</p>
