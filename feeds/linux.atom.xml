@@ -55,7 +55,7 @@ add test.php  &lt;/p&gt;
 &lt;h1&gt;定制ISO&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;定制前最好把系统多余到软件包什么的都删了，需要到软件保留。&lt;/em&gt;&lt;br /&gt;
 直接看截图吧：&lt;br /&gt;
-&lt;img alt="打开Remastersys" src="./images/linux/linux_custom/open.png" /&gt;  &lt;/p&gt;
+&lt;img alt="打开Remastersys" src="/static/images/linux/linux_custom/open.png" /&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="选择" src="/static/images/linux/linux_custom/choose.png" /&gt;  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="确定" src="/static/images/linux/linux_custom/sure.png" /&gt;  &lt;/p&gt;
 &lt;hr /&gt;
