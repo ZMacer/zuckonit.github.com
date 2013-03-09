@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="">
 <head>
+    <link rel="shortcut icon" href="/static/favicon.png" />
     <meta charset="utf-8"/>
     <title>Oh My Libnotify - When I'm gone</title>
     <meta name="author" content="Mocker">
@@ -16,12 +17,9 @@
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    
-    
-
+        
     <link href="./" type="application/atom+xml" rel="alternate" title="When I'm gone ATOM Feed" />
-    
-</head>
+    </head>
 
 <body>
     <header class="clearfix" role="banner">
@@ -30,33 +28,27 @@
         </div>
     </header>
 
-    
-<div role="main" class="content clearfix">	
+    <div role="main" class="content clearfix">	
 	<article>
 		<div class="post wrapper">
 			<h1>Oh My Libnotify</h1>
 			<h2>About libnotify</h2>
 <hr />
 <p>libnotify is a bubble top desktop method of notification, many Languages' API are supported. Detail information? I guess archwiki is a good helper: <a href="https://wiki.archlinux.org/index.php/Libnotify">archwiki libnotify</a><br />
-Seems that there's a little trouble under windows, but I am not fucking care about that.<br />
-</p>
+Seems that there's a little trouble under windows, but I am not fucking care about that.  </p>
 <h2>What to do with libnotify</h2>
 <hr />
-<p>libnotify is just a tool of notification.Ya...notification...let me guess, OMG, which should be good way of reminder..Bingo!!!<br />
-</p>
+<p>libnotify is just a tool of notification.Ya...notification...let me guess, OMG, which should be good way of reminder..Bingo!!!  </p>
 <h2>What I do with it</h2>
 <hr />
 <ul>
-<li>weather notify<br />
-</li>
-<li>gmail checker<br />
-</li>
-<li>QQ online?<br />
-</li>
+<li>weather notify  </li>
+<li>gmail checker  </li>
+<li>QQ online?  </li>
 </ul>
 <h2>Screenshots (weather only)</h2>
 <hr />
-<p><img alt="weatherlike" src="static/images/python/libnotify/weather.png" /></p>
+<p><img alt="weatherlike" src="./images/python/libnotify/weather.png" /></p>
 <h2>Code of main part</h2>
 <hr />
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -170,21 +162,18 @@ Seems that there's a little trouble under windows, but I am not fucking care abo
 </td></tr></table>
 
 <h3>Then cronjob it</h3>
-<div class="codehilite"><pre><span class="mi">0</span>  <span class="o">*</span><span class="sr">/1  * * *  export DISPLAY=:0.0 &amp;&amp; /</span><span class="n">home</span><span class="sr">/mocker/</span><span class="o">.</span><span class="n">bin</span><span class="sr">/cronjobs/</span><span class="n">weather</span><span class="o">.</span><span class="n">py</span>
+<div class="codehilite"><pre><span class="mi">0</span>  <span class="err">*/</span><span class="mi">1</span>  <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>  <span class="n">export</span> <span class="n">DISPLAY</span><span class="o">=:</span><span class="mf">0.0</span> <span class="o">&amp;&amp;</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mocker</span><span class="o">/</span><span class="p">.</span><span class="n">bin</span><span class="o">/</span><span class="n">cronjobs</span><span class="o">/</span><span class="n">weather</span><span class="p">.</span><span class="n">py</span>
 </pre></div>
 
 
 <p>cause cronjob use different evironment with your shell, so...export DISPLAY=:0.0
-required<br />
-</p>
-<p>enjoy it!!!<br />
-</p>
+required  </p>
+<p>enjoy it!!!  </p>
 			
 			<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 						
-			
-			<div class="comments">
+						<div class="comments">
 			<h2>Comments !</h2>
 			    <div id="disqus_thread"></div>
 			    <script type="text/javascript">
@@ -200,42 +189,29 @@ required<br />
 		</div>
 	
 	<div class="meta wrapper">
-	<time datetime="2013-01-27T00:00:00" pubdate> 1月 27 2013</time>
+	<time datetime="2013-01-27T00:00:00" pubdate>Jan 27 2013</time>
 	<ul class="tag clearfix">
 		<li><a href="./category/python.html">python</a></li>
-
-	
-		<li><a href="./tag/notify.html">notify</a></li>
-	
-		<li><a href="./tag/python.html">python</a></li>
-	
-
-	</ul>
-	
+			<li><a href="./tag/notify.html">notify</a></li>
+			<li><a href="./tag/python.html">python</a></li>
+		</ul>
+	</div>	</article>	
 </div>
-	</article>	
-</div>
-
 
 
 <footer class="clearfix">
     <div class="wrapper pages">
         <ul class="nav">
-        
-            <li><a href="./archives.html">Archive</a></li>
+                    <li><a href="./archives.html">Archive</a></li>
         </ul>
     </div>
 
     <div class="copy wrapper">
         <!--modified by Mocker-->
-        <p>
-        <a href="http://weibo.com/zuckonit"><img src="/static/contacts/Weibo.png" title="Weibo"/></a>
-        
-        <a href="https://github.com/Zuckonit"><img src="/static/contacts/Github.png" title="Github"/></a>
-        
-        <a href="https://plus.google.com/u/0/111312737570320393101"><img src="/static/contacts/G+.png" title="G+"/></a>
-        
-        <a href="https://www.facebook.com/zuckor.siner"><img src="/static/contacts/Facebook.png" title="Facebook"/></a>
+        <p>        <a href="http://weibo.com/zuckonit"><img src="/static/contacts/Weibo.png" title="Weibo"/></a>
+                <a href="https://github.com/Zuckonit"><img src="/static/contacts/Github.png" title="Github"/></a>
+                <a href="https://plus.google.com/u/0/111312737570320393101"><img src="/static/contacts/G+.png" title="G+"/></a>
+                <a href="https://www.facebook.com/zuckor.siner"><img src="/static/contacts/Facebook.png" title="Facebook"/></a>
         </p>
         <p role="contentinfo">© 2012 Mocker<br>
         Proudly powered by @Zuckonit</a>.</p>

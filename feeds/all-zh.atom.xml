@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/all-zh.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2013-02-05T00:00:00+08:00</updated><entry><title>Let's go</title><link href="zuckonit.github.com/letsgo.html" rel="alternate"></link><updated>2013-02-05T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-02-05:letsgo.html</id><summary type="html">&lt;pre&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/all-zh.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2013-03-10T00:00:00+08:00</updated><entry><title>Toggle Touchpad</title><link href="zuckonit.github.com/touchpadtoggle.html" rel="alternate"></link><updated>2013-03-10T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-03-10:touchpadtoggle.html</id><summary type="html">&lt;h2&gt;Touchpad&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;I do not get any reasons to explain what is Touchpad, but which do really bring so many shit, especially when you are typing...  &lt;/p&gt;
+&lt;h2&gt;How avoid this&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Toggle&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;Hot-swap&lt;/em&gt;&lt;br /&gt;
+Actually, I realize both double methods:&lt;br /&gt;
+Toggle, shell script + xbindkeys (or keybord setting under your destop environment). As for Hot-swap, write a daemon to listen the event, if using mouse -&amp;gt; touchpad off, else on.  &lt;/p&gt;
+&lt;h2&gt;Source code (Toggle only)&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class="nv"&gt;TOUCHPAD_ACTIVE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;synclient -l | grep TouchpadOff | awk -F&lt;span class="s2"&gt;&amp;quot;=&amp;quot;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+synclient &lt;span class="nv"&gt;TouchpadOff&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;synclient -l | grep -c &lt;span class="s1"&gt;&amp;#39;TouchpadOff.*=.*0&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$TOUCHPAD_ACTIVE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;notify-send &lt;span class="s2"&gt;&amp;quot;Touchpad Status&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Touchpad on&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;--icon=$HOME/Pictures/icons/touchpadon.png&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;notify-send &lt;span class="s2"&gt;&amp;quot;Touchpad Status&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Touchpad off&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;--icon=$HOME/Pictures/icons/touchpadoff.png&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Then bind this script with a hotkey you like to use, such as XF86Touchpad, which represents Fn + F6, any
+other keys' name? just &lt;code&gt;xbindkeys -k&lt;/code&gt;...&lt;/p&gt;
+&lt;h2&gt;Screenshot&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Touchpad on" src="./images/shell/touchpad/touchpadon.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Touchpad off" src="./images/shell/touchpad/touchpadoff.png" /&gt;&lt;/p&gt;</summary><category term="Touchpad"></category><category term="shell"></category></entry><entry><title>Let's go</title><link href="zuckonit.github.com/letsgo.html" rel="alternate"></link><updated>2013-02-05T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-02-05:letsgo.html</id><summary type="html">&lt;pre&gt;
 &lt;embed src="http://player.opengg.me/player.php/sid/XMTY4Mzk5NTc2/v.swf"
 quality="high" width="480" height="400" align="middle"
 allowScriptAccess="sameDomain" allowFullscreen="true"
@@ -7,21 +43,16 @@ type="application/x-shockwave-flash"&gt;&lt;/embed&gt;&lt;/embed&gt;
 &lt;/pre&gt;</summary><category term="go"></category></entry><entry><title>Oh My Libnotify</title><link href="zuckonit.github.com/libnotify.html" rel="alternate"></link><updated>2013-01-27T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-01-27:libnotify.html</id><summary type="html">&lt;h2&gt;About libnotify&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;libnotify is a bubble top desktop method of notification, many Languages' API are supported. Detail information? I guess archwiki is a good helper: &lt;a href="https://wiki.archlinux.org/index.php/Libnotify"&gt;archwiki libnotify&lt;/a&gt;&lt;br /&gt;
-Seems that there's a little trouble under windows, but I am not fucking care about that.&lt;br /&gt;
-&lt;/p&gt;
+Seems that there's a little trouble under windows, but I am not fucking care about that.  &lt;/p&gt;
 &lt;h2&gt;What to do with libnotify&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;libnotify is just a tool of notification.Ya...notification...let me guess, OMG, which should be good way of reminder..Bingo!!!&lt;br /&gt;
-&lt;/p&gt;
+&lt;p&gt;libnotify is just a tool of notification.Ya...notification...let me guess, OMG, which should be good way of reminder..Bingo!!!  &lt;/p&gt;
 &lt;h2&gt;What I do with it&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
-&lt;li&gt;weather notify&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;gmail checker&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;QQ online?&lt;br /&gt;
-&lt;/li&gt;
+&lt;li&gt;weather notify  &lt;/li&gt;
+&lt;li&gt;gmail checker  &lt;/li&gt;
+&lt;li&gt;QQ online?  &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Screenshots (weather only)&lt;/h2&gt;
 &lt;hr /&gt;
@@ -139,18 +170,15 @@ Seems that there's a little trouble under windows, but I am not fucking care abo
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;h3&gt;Then cronjob it&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="sr"&gt;/1  * * *  export DISPLAY=:0.0 &amp;amp;&amp;amp; /&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="sr"&gt;/mocker/&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="sr"&gt;/cronjobs/&lt;/span&gt;&lt;span class="n"&gt;weather&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="err"&gt;*/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;  &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;  &lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=:&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mocker&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cronjobs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;weather&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;cause cronjob use different evironment with your shell, so...export DISPLAY=:0.0
-required&lt;br /&gt;
-&lt;/p&gt;
-&lt;p&gt;enjoy it!!!&lt;br /&gt;
-&lt;/p&gt;</summary><category term="notify"></category><category term="python"></category></entry><entry><title>MISTAKE</title><link href="zuckonit.github.com/mistake.html" rel="alternate"></link><updated>2013-01-15T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-01-15:mistake.html</id><summary type="html">&lt;p&gt;Actually I should have written such blog yesterday.&lt;br /&gt;
-But, I think it is nerver too late to realize some mistakes.&lt;br /&gt;
-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;lonely&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;everybody&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;mistakes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+required  &lt;/p&gt;
+&lt;p&gt;enjoy it!!!  &lt;/p&gt;</summary><category term="notify"></category><category term="python"></category></entry><entry><title>MISTAKE</title><link href="zuckonit.github.com/mistake.html" rel="alternate"></link><updated>2013-01-15T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-01-15:mistake.html</id><summary type="html">&lt;p&gt;Actually I should have written such blog yesterday.&lt;br /&gt;
+But, I think it is nerver too late to realize some mistakes.  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;lonely&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;everybody&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;mistakes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -168,43 +196,37 @@ Than you YK and Lauri.&lt;/p&gt;</summary><category term="mistake"></category><c
 
 
 &lt;p&gt;Yeah, believe your eyes, it is just so easy to install lamp in ubuntu.&lt;br /&gt;
-During the process, which will let you set the root password of mysql.&lt;br /&gt;
-&lt;/p&gt;
+During the process, which will let you set the root password of mysql.  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;Whether your installation is successful&lt;/h2&gt;
 &lt;p&gt;*Test apache
-open such link in your browser:&lt;br /&gt;
-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;http:&lt;/span&gt;&lt;span class="sr"&gt;//&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;
+open such link in your browser:  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//localhost&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;you will see:&lt;br /&gt;
 &lt;img alt="apache" src="./images/linux/lamp/test_apache.png" /&gt;&lt;/p&gt;
 &lt;p&gt;*Test php
-add test.php&lt;br /&gt;
-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="x"&gt;    sudo echo &amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="nb"&gt;phpinfo&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;quot; &amp;gt; /var/www/test.php&lt;/span&gt;
+add test.php  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;sudo&lt;/span&gt; &lt;span class="nx"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="nb"&gt;phpinfo&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;/var/www/test.php&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;restart apache&lt;br /&gt;
-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="sr"&gt;/etc/i&lt;/span&gt;&lt;span class="n"&gt;nit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt;
+&lt;p&gt;restart apache  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;open such link in your browser:&lt;br /&gt;
-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;http:&lt;/span&gt;&lt;span class="sr"&gt;//&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;
+&lt;p&gt;open such link in your browser:  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//localhost/test.php&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;you will see:&lt;br /&gt;
 &lt;img alt="php" src="./images/linux/lamp/test_php.png" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;Then, just enjoy it:)&lt;br /&gt;
-&lt;/p&gt;</summary><category term="ubuntu"></category><category term="lamp"></category></entry><entry><title>Send Your Note to Your Gmail</title><link href="zuckonit.github.com/gnote.vim.html" rel="alternate"></link><updated>2012-10-21T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-10-21:gnote.vim.html</id><summary type="html">&lt;h2&gt;why I write such vim plugin&lt;/h2&gt;
+&lt;p&gt;Then, just enjoy it:)  &lt;/p&gt;</summary><category term="ubuntu"></category><category term="lamp"></category></entry><entry><title>Send Your Note to Your Gmail</title><link href="zuckonit.github.com/gnote.vim.html" rel="alternate"></link><updated>2012-10-21T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-10-21:gnote.vim.html</id><summary type="html">&lt;h2&gt;why I write such vim plugin&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;ever I used a app called gnote on android,which is used for noting&lt;/li&gt;
@@ -216,100 +238,100 @@ add test.php&lt;br /&gt;
 &lt;h2&gt;part of code&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h2&gt;gnote.vim&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Error:no python supported!&amp;quot;&lt;/span&gt;
-    &lt;span class="n"&gt;finish&lt;/span&gt;
-&lt;span class="n"&gt;endif&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Error:no python supported!&amp;quot;&lt;/span&gt;
+    &lt;span class="nx"&gt;finish&lt;/span&gt;
+&lt;span class="nx"&gt;endif&lt;/span&gt;
 
-&lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Gnote&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="nx"&gt;Gnote&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;EOF&lt;/span&gt;
-&lt;span class="nb"&gt;import&lt;/span&gt; &lt;span class="n"&gt;imaplib&lt;/span&gt;
-&lt;span class="nb"&gt;import&lt;/span&gt; &lt;span class="nb"&gt;time&lt;/span&gt;
-&lt;span class="nb"&gt;import&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Gmail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;IMAP_SERVER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;imap.gmail.com&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;IMAP_PORT&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;993&lt;/span&gt;
+&lt;span class="nx"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;EOF&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;imaplib&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;vim&lt;/span&gt;
+&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;Gmail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;object&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="nx"&gt;IMAP_SERVER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;imap.gmail.com&amp;#39;&lt;/span&gt;
+    &lt;span class="nx"&gt;IMAP_PORT&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;993&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pwd&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;usr&lt;/span&gt;
-        &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pwd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pwd&lt;/span&gt;
-        &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;imaplib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IMAP4_SSL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IMAP_SERVER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IMAP_PORT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;usr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;pwd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;usr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;usr&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pwd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;pwd&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;imaplib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;IMAP4_SSL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;IMAP_SERVER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;IMAP_PORT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pwd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;True:&lt;/span&gt;
-            &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;usr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pwd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nx"&gt;True&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-    &lt;span class="nv"&gt;@staticmethod&lt;/span&gt;
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;OK&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;code:&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;
-        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;False&lt;/span&gt;
+    &lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="nx"&gt;staticmethod&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;OK&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;True&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;False&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;__del__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;__del__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;addbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;addbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;delbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;delete&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;code&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;delbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;delete&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;code&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;modbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;oldbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;newbox&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;rename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;oldbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;newbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;modbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;oldbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;newbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;rename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;oldbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;newbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;addnote&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;From: %s\n\ntime:%s\n\n%s&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;%&lt;/span&gt;&lt;span class="err"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hld&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;
+    &lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;addnote&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;From: %s\n\ntime:%s\n\n%s&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;usr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;res&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hld&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;checkcode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;rc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt;
 
-&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;g:gnote_gmail_username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;pawd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;g:gnote_gmail_password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;mailbox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-    &lt;span class="n"&gt;gmail&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Gmail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pawd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;try:&lt;/span&gt;
-        &lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;except:&lt;/span&gt;
-        &lt;span class="n"&gt;pass&lt;/span&gt;
+&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="nx"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;vim&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;g:gnote_gmail_username&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;pawd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;vim&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;g:gnote_gmail_password&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;mailbox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;vim&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;buffer&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;gmail&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Gmail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;pawd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;login&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;except&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;pass&lt;/span&gt;
 
-    &lt;span class="n"&gt;note&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;\r\n&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:])&lt;/span&gt;
-    &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addnote&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;note&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;True:&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;send to %s successful!&amp;#39;&lt;/span&gt;&lt;span class="nv"&gt;%mailbox&lt;/span&gt;
-    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;send failed!&amp;#39;&lt;/span&gt;
+    &lt;span class="nx"&gt;note&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;\r\n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;vim&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;buffer&lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addnote&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;note&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nx"&gt;True&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;send to %s successful!&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="nx"&gt;mailbox&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nx"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;send failed!&amp;#39;&lt;/span&gt;
 
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nx"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-&lt;span class="n"&gt;EOF&lt;/span&gt;
-&lt;span class="n"&gt;endfunction&lt;/span&gt;
+&lt;span class="nx"&gt;EOF&lt;/span&gt;
+&lt;span class="nx"&gt;endfunction&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;config in vim&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;g:gnote_gmail_username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;your_gmail_username@gmail.com&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;g:gnote_gmail_password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;your_gmail_password&amp;quot;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;gnote_gmail_username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;your_gmail_username@gmail.com&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;let&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;gnote_gmail_password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;your_gmail_password&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -322,16 +344,13 @@ interfaces for further functions,some functions may be useful.....maybe.&lt;/p&g
 &lt;p&gt;things look like this:&lt;br /&gt;
 you write your notes,diary or something else in vim,&lt;br /&gt;
 the first line is the note folder in gmail&lt;br /&gt;
-so,you'd better write sth meaningful in the first line&lt;br /&gt;
-&lt;/p&gt;
-&lt;p&gt;then..........&lt;br /&gt;
-&lt;/p&gt;
+so,you'd better write sth meaningful in the first line  &lt;/p&gt;
+&lt;p&gt;then..........  &lt;/p&gt;
 &lt;p&gt;just :call Gnote()&lt;br /&gt;
 or just bind a key for that,things will look like easy - -*&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;what's more?&lt;br /&gt;
-no more........&lt;br /&gt;
-&lt;/p&gt;</summary><category term="vim"></category><category term="python"></category><category term="plugin"></category></entry><entry><title>awalys with me</title><link href="zuckonit.github.com/always_with-me.html" rel="alternate"></link><updated>2012-09-26T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-26:always_with-me.html</id><summary type="html">&lt;pre&gt;
+no more........  &lt;/p&gt;</summary><category term="vim"></category><category term="python"></category><category term="plugin"></category></entry><entry><title>awalys with me</title><link href="zuckonit.github.com/always_with-me.html" rel="alternate"></link><updated>2012-09-26T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-26:always_with-me.html</id><summary type="html">&lt;pre&gt;
 &lt;embed src="http://player.youku.com/player.php/sid/XMjQ4OTAzNTQ4/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"&gt;&lt;/embed&gt;
 &lt;/pre&gt;</summary><category term="music"></category><category term="cartoon"></category></entry><entry><title>whether your QQ is online</title><link href="zuckonit.github.com/are_you_online.html" rel="alternate"></link><updated>2012-09-25T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-25:are_you_online.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;Why I write such script&lt;/h2&gt;
@@ -403,29 +422,25 @@ touch &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt
 &lt;h2&gt;Why I not use python,but shell&lt;/h2&gt;
 &lt;p&gt;作为一个pythoner,想实现这个功能时，首先想到的是用python。但在使用coky的过程中，
 我发现conky在我设定的时间周期内调用python解释器，相比shell脚本消耗了更多的资源，
-反正会写shell脚本，当练练手了，果断有了这个shell版本.&lt;br /&gt;
-&lt;/p&gt;
+反正会写shell脚本，当练练手了，果断有了这个shell版本.  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;Screenshot&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="Screenshot" src="./images/shell/are_you_online/conky.png" /&gt;&lt;/p&gt;</summary><category term="shell"></category><category term="conky"></category></entry><entry><title>++age</title><link href="zuckonit.github.com/birthday.html" rel="alternate"></link><updated>2012-09-24T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-24:birthday.html</id><summary type="html">&lt;h1&gt;Today is my birthday&lt;/h1&gt;
 &lt;h2&gt;&lt;code&gt;++age&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;人生的十字路口渐渐到来。人越大，责任越多，烦恼越多，需要考虑的事情也越来越多。&lt;br /&gt;
-需要有足够的勇气走下去，Eerything will be ok！！！&lt;br /&gt;
-&lt;/p&gt;
+需要有足够的勇气走下去，Eerything will be ok！！！  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;What's more , no more!!!&lt;/p&gt;</summary><category term="birthday"></category><category term="today"></category></entry><entry><title>See you lazymonkey</title><link href="zuckonit.github.com/see_you_monkey.html" rel="alternate"></link><updated>2012-08-30T10:52:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:see_you_monkey.html</id><summary type="html">&lt;h1&gt;See You Lazymonkey&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;img alt="Monkey" src="./images/misc/monkey/monkey.png" /&gt;&lt;/p&gt;</summary><category term="monkey"></category><category term="brother"></category></entry><entry><title>shell学习笔记</title><link href="zuckonit.github.com/shell_note.html" rel="alternate"></link><updated>2012-08-30T09:58:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:shell_note.html</id><summary type="html">&lt;h2&gt;Shell 笔记&lt;/h2&gt;
 &lt;p&gt;Where there is a shell , there is a way!!&lt;br /&gt;
-&lt;img alt="Cool" src="./images/shell/shell_note/longmao.png" /&gt;&lt;br /&gt;
-&lt;/p&gt;
+&lt;img alt="Cool" src="./images/shell/shell_note/longmao.png" /&gt;  &lt;/p&gt;
 &lt;hr /&gt;</summary><category term="shell"></category><category term="note"></category></entry><entry><title>定制个人linux</title><link href="zuckonit.github.com/linux_custom.html" rel="alternate"></link><updated>2012-08-29T22:26:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-29:linux_custom.html</id><summary type="html">&lt;p&gt;不知道你有没有这样的苦恼，每次重装linux系统的时候，又要把以前的&lt;br /&gt;
 软件重装一遍。又是换源，又是更新。各种蛋疼。说到这里，你大概猜到这篇&lt;br /&gt;
-博客专门用来治疗这种蛋疼到。好了,不说废话了，直接看下面方法。&lt;br /&gt;
-&lt;/p&gt;
+博客专门用来治疗这种蛋疼到。好了,不说废话了，直接看下面方法。  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;安装Remastersys(以Ubuntu为例)&lt;/h1&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;deb http://www.geekconnection.org/remastersys/repository karmic/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="sr"&gt;/etc/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;  
+&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;deb http://www.geekconnection.org/remastersys/repository karmic/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;  
     &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;upgrade&lt;/span&gt;  
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -434,88 +449,13 @@ touch &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt
 &lt;h1&gt;定制ISO&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;定制前最好把系统多余到软件包什么的都删了，需要到软件保留。&lt;/em&gt;&lt;br /&gt;
 直接看截图吧：&lt;br /&gt;
-&lt;img alt="打开Remastersys" src="./images/linux/linux_custom/open.png" /&gt;&lt;br /&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;img alt="选择" src="./images/linux/linux_custom/choose.png" /&gt;&lt;br /&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;img alt="确定" src="./images/linux/linux_custom/sure.png" /&gt;&lt;br /&gt;
-&lt;/p&gt;
+&lt;img alt="打开Remastersys" src="./images/linux/linux_custom/open.png" /&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="选择" src="./images/linux/linux_custom/choose.png" /&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="确定" src="./images/linux/linux_custom/sure.png" /&gt;  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;最后生成到iso文件在/home/remastersys/remastersys 里面&lt;br /&gt;
 拷贝出来后，可清理。&lt;br /&gt;
-&lt;img alt="清理" src="./images/linux/linux_custom/clean.png" /&gt;&lt;br /&gt;
-&lt;/p&gt;</summary><category term="linux"></category><category term="定制"></category></entry><entry><title>xubuntu12.04 折腾记</title><link href="zuckonit.github.com/xubuntu12.04-laptop.html" rel="alternate"></link><updated>2012-08-28T22:51:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-28:xubuntu12.04-laptop.html</id><summary type="html">&lt;h2&gt;折腾来由&lt;/h2&gt;
-&lt;p&gt;本人持有y450，俗称小y。y恰好是姓氏到第一个字母。当然，这跟我当初为什么买小y没有一毛钱到关系。&lt;br /&gt;
-电脑上一直装到ubuntu10.04，暑假回家到时候，心血来潮地折腾了下xfce4，其简单性，轻量性是我放弃gnome2催化剂。一不做，二不休，这次直接换装xubuntu了。选择了最新的12.04版本，不要误会，本人完全没有最新情结。&lt;br /&gt;
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;安装&lt;/h2&gt;
-&lt;p&gt;硬盘安装比较麻烦，手头又没有光盘，借了个U盘，挂载了xubuntu。usb启动，安装........&lt;br /&gt;
-由于以前，我把home目录单独挂载了一个分区，因此此次重装系统，不会影响到我到主目录，连备份都省了&lt;br /&gt;
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h2&gt;开始折腾&lt;/h2&gt;
-&lt;p&gt;安装好了后，界面很清新，有一些细节需要自己动手配置下&lt;br /&gt;
-&lt;/p&gt;
-&lt;h3&gt;桌面图标字体背景不透明&lt;/h3&gt;
-&lt;p&gt;在主目录下新建.gtk-2.0.rc文件&lt;br /&gt;
-&lt;code&gt;vim ~/.gtk-2.0.rc&lt;/code&gt;&lt;br /&gt;
-写入一下内容&lt;br /&gt;
-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;style&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xfdesktop-icon-view&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;  
-    &lt;span class="n"&gt;font_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;sans Bold&amp;quot;&lt;/span&gt;         &lt;span class="c1"&gt;#字体名称设置  &lt;/span&gt;
-    &lt;span class="nn"&gt;XfdesktopIconView::&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="c1"&gt;#透明度设置  &lt;/span&gt;
-    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NORMAL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#000000&amp;quot;&lt;/span&gt;        &lt;span class="c1"&gt;#背景颜色(下同)  &lt;/span&gt;
-    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;SELECTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71B9FF&amp;quot;&lt;/span&gt;  
-    &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ACTIVE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71FFAD&amp;quot;&lt;/span&gt;  
-    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;NORMAL&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;          &lt;span class="c1"&gt;#文字颜色(下同)  &lt;/span&gt;
-    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;SELECTED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71B9FF&amp;quot;&lt;/span&gt;  
-    &lt;span class="n"&gt;fg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ACTIVE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;#71FFAD&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;  
-    &lt;span class="n"&gt;widget_class&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;*XfdesktopIconView*&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xfdesktop-icon-view&amp;quot;&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;更新源&lt;/h3&gt;
-&lt;p&gt;新德立软件中心，选最佳服务器即可&lt;br /&gt;
-由于是12.04,版本比较新，网上提到源到博客比较少。没必要手动写入&lt;br /&gt;
-然后sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade&lt;/p&gt;
-&lt;h3&gt;vim&lt;/h3&gt;
-&lt;p&gt;sudo apt-get install vim后，发现不能共享系统剪切板。google后才知道是xterm-clipboard没有被编译进来。&lt;br /&gt;
-难道要我自己编译？算了吧，直接sudo apt-get install vim-gtk.毕竟不是pcman，问题又来了,包到依赖怎么也弄不好&lt;br /&gt;
-我都懒得说这心酸到过程了。。。。&lt;br /&gt;
-直接说解决方法吧:&lt;br /&gt;
-&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;autoremove&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common&lt;/span&gt;
-    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;gtk&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;搞定！！！&lt;/p&gt;
-&lt;h3&gt;.显卡&lt;/h3&gt;
-&lt;p&gt;开源的nvidia显卡可以让你电脑温度暴高，转速暴快&lt;br /&gt;
-去官网下载一个最新的闭源显卡驱动&lt;br /&gt;
-关掉x server:&lt;br /&gt;
-xfce4 没有gdm&lt;br /&gt;
-    sudo service lightdm stop &lt;br /&gt;
-然后Alt+F1 找到驱动所在目录,sudo sh ./xxxxx.run&lt;br /&gt;
-最后生成下配置文件:sudo nvidia-xconfig&lt;br /&gt;
-重启xserver：sudo service lightdm start&lt;/p&gt;
-&lt;h3&gt;.thunar启动慢&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="sr"&gt;/usr/s&lt;/span&gt;&lt;span class="n"&gt;hare&lt;/span&gt;&lt;span class="sr"&gt;/gvfs/mo&lt;/span&gt;&lt;span class="n"&gt;unts&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mount&lt;/span&gt;  
-    &lt;span class="err"&gt;更改&lt;/span&gt;&lt;span class="n"&gt;AutoMount&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;false&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;.无线网&lt;/h3&gt;
-&lt;p&gt;重启，F2进BIOS,F9恢复默认设置，F10保存并重启 &lt;br /&gt;
-&lt;code&gt;sudo ifconfig wlan0 up&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;.小插件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo apt-get install xfce4-goodies&lt;/code&gt;
-全部装了吧，不差那点内存&lt;br /&gt;
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;看到如此凌乱到博客，你大概知道我有多折腾了。。。。&lt;br /&gt;
-&lt;/p&gt;</summary><category term="xubuntu12.04 y450"></category></entry><entry><title>publish blog with github+markdown+pelican</title><link href="zuckonit.github.com/github_markdown_pelican.html" rel="alternate"></link><updated>2012-08-27T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-27:github_markdown_pelican.html</id><summary type="html">&lt;h1&gt;简单的介绍下这三个"工具"&lt;/h1&gt;
+&lt;img alt="清理" src="./images/linux/linux_custom/clean.png" /&gt;  &lt;/p&gt;</summary><category term="linux"></category><category term="定制"></category></entry><entry><title>publish blog with github+markdown+pelican</title><link href="zuckonit.github.com/github_markdown_pelican.html" rel="alternate"></link><updated>2012-08-27T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-27:github_markdown_pelican.html</id><summary type="html">&lt;h1&gt;简单的介绍下这三个"工具"&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;h2&gt;github page&lt;/h2&gt;
 &lt;p&gt;简单来说github page就是github的一个附件功能，用来搭建个人博客的功能。&lt;br /&gt;
@@ -528,8 +468,7 @@ xfce4 没有gdm&lt;br /&gt;
 &lt;h2&gt;what is pelican&lt;/h2&gt;
 &lt;p&gt;pelican 类似jekyll，但是基于python的博客系统，用来搭建github page。&lt;br /&gt;
 由于我用的Ubuntu10.04，安装jekyll的话ruby版本是个问题，要重新编译。&lt;br /&gt;
-作为一个pythoner，果断投入pelican的怀抱&lt;br /&gt;
-&lt;/p&gt;
+作为一个pythoner，果断投入pelican的怀抱  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;安装pelican&lt;/h2&gt;
 &lt;p&gt;由于国内GFW原因，还是下源码自己编译吧 &lt;br /&gt;
@@ -539,10 +478,8 @@ xfce4 没有gdm&lt;br /&gt;
 &lt;h2&gt;markdown&lt;/h2&gt;
 &lt;p&gt;markdown 这个就不解释了，自己看教程吧&lt;br /&gt;
 &lt;a href="http://qingbo.net/picky/502-markdown-syntax.html"&gt;markdown 语法&lt;/a&gt;&lt;br /&gt;
-&lt;a href="http://www.ituring.com.cn/article/details/775"&gt;图灵社区markdown教程&lt;/a&gt;&lt;br /&gt;
-&lt;/p&gt;
+&lt;a href="http://www.ituring.com.cn/article/details/775"&gt;图灵社区markdown教程&lt;/a&gt;  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;最后附上详细教程一篇&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://x-wei.github.com/pelican_github_blog.html"&gt;初步实现&lt;/a&gt;&lt;br /&gt;
-&lt;a href="http://x-wei.github.com/tag/pelican.html"&gt;实用功能&lt;/a&gt;&lt;br /&gt;
-&lt;/p&gt;</summary><category term="github"></category><category term="markdown"></category><category term="pelican"></category></entry></feed>
+&lt;a href="http://x-wei.github.com/tag/pelican.html"&gt;实用功能&lt;/a&gt;  &lt;/p&gt;</summary><category term="github"></category><category term="markdown"></category><category term="pelican"></category></entry></feed>

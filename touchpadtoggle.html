@@ -3,7 +3,7 @@
 <head>
     <link rel="shortcut icon" href="/static/favicon.png" />
     <meta charset="utf-8"/>
-    <title>Ubuntu Lamp - When I'm gone</title>
+    <title>Toggle Touchpad - When I'm gone</title>
     <meta name="author" content="Mocker">
 
     <meta name="HandheldFriendly" content="True">
@@ -31,50 +31,44 @@
     <div role="main" class="content clearfix">	
 	<article>
 		<div class="post wrapper">
-			<h1>Ubuntu Lamp</h1>
-			<h2>What is LAMP</h2>
-<ul>
-<li>Linux Apache Mysql Php</li>
-<li>it is a free web developing environment</li>
-</ul>
+			<h1>Toggle Touchpad</h1>
+			<h2>Touchpad</h2>
 <hr />
-<h2>How to install lamp in ubuntu</h2>
-<div class="codehilite"><pre>    <span class="n">sudo</span> <span class="n">tasksel</span> <span class="n">install</span> <span class="n">lamp</span><span class="o">-</span><span class="n">server</span>
-</pre></div>
-
-
-<p>Yeah, believe your eyes, it is just so easy to install lamp in ubuntu.<br />
-During the process, which will let you set the root password of mysql.  </p>
+<p>I do not get any reasons to explain what is Touchpad, but which do really bring so many shit, especially when you are typing...  </p>
+<h2>How avoid this</h2>
 <hr />
-<h2>Whether your installation is successful</h2>
-<p>*Test apache
-open such link in your browser:  </p>
-<div class="codehilite"><pre>    <span class="nl">http:</span><span class="c1">//localhost</span>
-</pre></div>
-
-
-<p>you will see:<br />
-<img alt="apache" src="./images/linux/lamp/test_apache.png" /></p>
-<p>*Test php
-add test.php  </p>
-<div class="codehilite"><pre>    <span class="nx">sudo</span> <span class="nx">echo</span> <span class="s2">&quot;</span><span class="cp">&lt;?php</span> <span class="nb">phpinfo</span><span class="p">();</span><span class="cp">?&gt;</span><span class="s2">&quot;</span> <span class="o">&gt;</span> <span class="err">/var/www/test.php</span>
-</pre></div>
-
-
-<p>restart apache  </p>
-<div class="codehilite"><pre>    <span class="n">sudo</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">apache2</span> <span class="n">restart</span>
-</pre></div>
-
-
-<p>open such link in your browser:  </p>
-<div class="codehilite"><pre>    <span class="nl">http:</span><span class="c1">//localhost/test.php</span>
-</pre></div>
-
-
-<p>you will see:<br />
-<img alt="php" src="./images/linux/lamp/test_php.png" /></p>
+<p><em>Toggle</em><br />
+<em>Hot-swap</em><br />
+Actually, I realize both double methods:<br />
+Toggle, shell script + xbindkeys (or keybord setting under your destop environment). As for Hot-swap, write a daemon to listen the event, if using mouse -&gt; touchpad off, else on.  </p>
+<h2>Source code (Toggle only)</h2>
 <hr />
-<p>Then, just enjoy it:)  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">#!/bin/bash</span>
+
+<span class="nv">TOUCHPAD_ACTIVE</span><span class="o">=</span><span class="sb">`</span>synclient -l | grep TouchpadOff | awk -F<span class="s2">&quot;=&quot;</span> <span class="s1">&#39;{print $2}&#39;</span><span class="sb">`</span>
+synclient <span class="nv">TouchpadOff</span><span class="o">=</span><span class="k">$(</span>synclient -l | grep -c <span class="s1">&#39;TouchpadOff.*=.*0&#39;</span><span class="k">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$TOUCHPAD_ACTIVE</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">    </span>notify-send <span class="s2">&quot;Touchpad Status&quot;</span> <span class="s2">&quot;Touchpad on&quot;</span> <span class="s2">&quot;--icon=$HOME/Pictures/icons/touchpadon.png&quot;</span>
+<span class="k">else</span>
+<span class="k">    </span>notify-send <span class="s2">&quot;Touchpad Status&quot;</span> <span class="s2">&quot;Touchpad off&quot;</span> <span class="s2">&quot;--icon=$HOME/Pictures/icons/touchpadoff.png&quot;</span>
+<span class="k">fi</span>
+</pre></div>
+</td></tr></table>
+
+<p>Then bind this script with a hotkey you like to use, such as XF86Touchpad, which represents Fn + F6, any
+other keys' name? just <code>xbindkeys -k</code>...</p>
+<h2>Screenshot</h2>
+<hr />
+<p><img alt="Touchpad on" src="./images/shell/touchpad/touchpadon.png" /></p>
+<p><img alt="Touchpad off" src="./images/shell/touchpad/touchpadoff.png" /></p>
 			
 			<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -83,7 +77,7 @@ add test.php  </p>
 			<h2>Comments !</h2>
 			    <div id="disqus_thread"></div>
 			    <script type="text/javascript">
-			       var disqus_identifier = "ubuntu_lamp.html";
+			       var disqus_identifier = "touchpadtoggle.html";
 			       (function() {
 			       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 			       dsq.src = 'http://binlife.disqus.com/embed.js';
@@ -95,11 +89,11 @@ add test.php  </p>
 		</div>
 	
 	<div class="meta wrapper">
-	<time datetime="2012-11-22T00:00:00" pubdate>Nov 22 2012</time>
+	<time datetime="2013-03-10T00:00:00" pubdate>Mar 10 2013</time>
 	<ul class="tag clearfix">
-		<li><a href="./category/linux.html">linux</a></li>
-			<li><a href="./tag/ubuntu.html">ubuntu</a></li>
-			<li><a href="./tag/lamp.html">lamp</a></li>
+		<li><a href="./category/misc.html">misc</a></li>
+			<li><a href="./tag/Touchpad.html">Touchpad</a></li>
+			<li><a href="./tag/shell.html">shell</a></li>
 		</ul>
 	</div>	</article>	
 </div>

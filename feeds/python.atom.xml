@@ -2,21 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/python.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2013-01-27T00:00:00+08:00</updated><entry><title>Oh My Libnotify</title><link href="zuckonit.github.com/libnotify.html" rel="alternate"></link><updated>2013-01-27T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-01-27:libnotify.html</id><summary type="html">&lt;h2&gt;About libnotify&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;libnotify is a bubble top desktop method of notification, many Languages' API are supported. Detail information? I guess archwiki is a good helper: &lt;a href="https://wiki.archlinux.org/index.php/Libnotify"&gt;archwiki libnotify&lt;/a&gt;&lt;br /&gt;
-Seems that there's a little trouble under windows, but I am not fucking care about that.&lt;br /&gt;
-&lt;/p&gt;
+Seems that there's a little trouble under windows, but I am not fucking care about that.  &lt;/p&gt;
 &lt;h2&gt;What to do with libnotify&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;libnotify is just a tool of notification.Ya...notification...let me guess, OMG, which should be good way of reminder..Bingo!!!&lt;br /&gt;
-&lt;/p&gt;
+&lt;p&gt;libnotify is just a tool of notification.Ya...notification...let me guess, OMG, which should be good way of reminder..Bingo!!!  &lt;/p&gt;
 &lt;h2&gt;What I do with it&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
-&lt;li&gt;weather notify&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;gmail checker&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;QQ online?&lt;br /&gt;
-&lt;/li&gt;
+&lt;li&gt;weather notify  &lt;/li&gt;
+&lt;li&gt;gmail checker  &lt;/li&gt;
+&lt;li&gt;QQ online?  &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Screenshots (weather only)&lt;/h2&gt;
 &lt;hr /&gt;
@@ -134,12 +129,10 @@ Seems that there's a little trouble under windows, but I am not fucking care abo
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;h3&gt;Then cronjob it&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="sr"&gt;/1  * * *  export DISPLAY=:0.0 &amp;amp;&amp;amp; /&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="sr"&gt;/mocker/&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="sr"&gt;/cronjobs/&lt;/span&gt;&lt;span class="n"&gt;weather&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="err"&gt;*/&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;  &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;  &lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=:&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mocker&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cronjobs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;weather&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;cause cronjob use different evironment with your shell, so...export DISPLAY=:0.0
-required&lt;br /&gt;
-&lt;/p&gt;
-&lt;p&gt;enjoy it!!!&lt;br /&gt;
-&lt;/p&gt;</summary><category term="notify"></category><category term="python"></category></entry></feed>
+required  &lt;/p&gt;
+&lt;p&gt;enjoy it!!!  &lt;/p&gt;</summary><category term="notify"></category><category term="python"></category></entry></feed>
