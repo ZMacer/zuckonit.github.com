@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/shell.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2012-09-25T00:00:00+08:00</updated><entry><title>whether your QQ is online</title><link href="zuckonit.github.com/are_you_online.html" rel="alternate"></link><updated>2012-09-25T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-25:are_you_online.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>When I'm gone</title><link href="zuckonit.github.com/" rel="alternate"></link><link href="zuckonit.github.com/feeds/shell.atom.xml" rel="self"></link><id>zuckonit.github.com/</id><updated>2013-03-10T00:00:00+08:00</updated><entry><title>Toggle Touchpad</title><link href="zuckonit.github.com/touchpadtoggle.html" rel="alternate"></link><updated>2013-03-10T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-03-10:touchpadtoggle.html</id><summary type="html">&lt;h2&gt;Touchpad&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;I do not get any reasons to explain what is Touchpad, but which do really bring so many shit, especially when you are typing...  &lt;/p&gt;
+&lt;h2&gt;How avoid this&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Toggle&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;Hot-swap&lt;/em&gt;&lt;br /&gt;
+Actually, I realize both double methods:&lt;br /&gt;
+Toggle, shell script + xbindkeys (or keybord setting under your desktop environment). As for Hot-swap, write a daemon to listen the event, if using mouse -&amp;gt; touchpad off, else on.  &lt;/p&gt;
+&lt;h2&gt;Source code (Toggle only)&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class="nv"&gt;TOUCHPAD_ACTIVE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;synclient -l | grep TouchpadOff | awk -F&lt;span class="s2"&gt;&amp;quot;=&amp;quot;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+synclient &lt;span class="nv"&gt;TouchpadOff&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;synclient -l | grep -c &lt;span class="s1"&gt;&amp;#39;TouchpadOff.*=.*0&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$TOUCHPAD_ACTIVE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;notify-send &lt;span class="s2"&gt;&amp;quot;Touchpad Status&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Touchpad on&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;--icon=$HOME/Pictures/icons/touchpadon.png&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;notify-send &lt;span class="s2"&gt;&amp;quot;Touchpad Status&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Touchpad off&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;--icon=$HOME/Pictures/icons/touchpadoff.png&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Then bind this script with a hotkey you like to use, such as XF86Touchpad, which represents Fn + F6, any
+other keys' name? just &lt;code&gt;xbindkeys -k&lt;/code&gt;...&lt;/p&gt;
+&lt;h2&gt;Screenshot&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Touchpad on" src="/static/images/shell/touchpad/touchpadon.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Touchpad off" src="/static/images/shell/touchpad/touchpadoff.png" /&gt;&lt;/p&gt;</summary><category term="Touchpad"></category><category term="shell"></category></entry><entry><title>whether your QQ is online</title><link href="zuckonit.github.com/are_you_online.html" rel="alternate"></link><updated>2012-09-25T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-25:are_you_online.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;Why I write such script&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;this is for conky&lt;/li&gt;
