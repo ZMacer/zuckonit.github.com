@@ -7,7 +7,7 @@
 &lt;p&gt;&lt;em&gt;Toggle&lt;/em&gt;&lt;br /&gt;
 &lt;em&gt;Hot-swap&lt;/em&gt;&lt;br /&gt;
 Actually, I realize both double methods:&lt;br /&gt;
-Toggle, shell script + xbindkeys (or keybord setting under your destop environment). As for Hot-swap, write a daemon to listen the event, if using mouse -&amp;gt; touchpad off, else on.  &lt;/p&gt;
+Toggle, shell script + xbindkeys (or keybord setting under your desktop environment). As for Hot-swap, write a daemon to listen the event, if using mouse -&amp;gt; touchpad off, else on.  &lt;/p&gt;
 &lt;h2&gt;Source code (Toggle only)&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -34,8 +34,8 @@ synclient &lt;span class="nv"&gt;TouchpadOff&lt;/span&gt;&lt;span class="o"&gt;=
 other keys' name? just &lt;code&gt;xbindkeys -k&lt;/code&gt;...&lt;/p&gt;
 &lt;h2&gt;Screenshot&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt="Touchpad on" src="./images/shell/touchpad/touchpadon.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Touchpad off" src="./images/shell/touchpad/touchpadoff.png" /&gt;&lt;/p&gt;</summary><category term="Touchpad"></category><category term="shell"></category></entry><entry><title>MISTAKE</title><link href="zuckonit.github.com/mistake.html" rel="alternate"></link><updated>2013-01-15T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-01-15:mistake.html</id><summary type="html">&lt;p&gt;Actually I should have written such blog yesterday.&lt;br /&gt;
+&lt;p&gt;&lt;img alt="Touchpad on" src="/static/images/shell/touchpad/touchpadon.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Touchpad off" src="/static/images/shell/touchpad/touchpadoff.png" /&gt;&lt;/p&gt;</summary><category term="Touchpad"></category><category term="shell"></category></entry><entry><title>MISTAKE</title><link href="zuckonit.github.com/mistake.html" rel="alternate"></link><updated>2013-01-15T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-01-15:mistake.html</id><summary type="html">&lt;p&gt;Actually I should have written such blog yesterday.&lt;br /&gt;
 But, I think it is nerver too late to realize some mistakes.  &lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;lonely&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;everybody&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;mistakes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

@@ -7,7 +7,7 @@
 &lt;p&gt;&lt;em&gt;Toggle&lt;/em&gt;&lt;br /&gt;
 &lt;em&gt;Hot-swap&lt;/em&gt;&lt;br /&gt;
 Actually, I realize both double methods:&lt;br /&gt;
-Toggle, shell script + xbindkeys (or keybord setting under your destop environment). As for Hot-swap, write a daemon to listen the event, if using mouse -&amp;gt; touchpad off, else on.  &lt;/p&gt;
+Toggle, shell script + xbindkeys (or keybord setting under your desktop environment). As for Hot-swap, write a daemon to listen the event, if using mouse -&amp;gt; touchpad off, else on.  &lt;/p&gt;
 &lt;h2&gt;Source code (Toggle only)&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -34,8 +34,8 @@ synclient &lt;span class="nv"&gt;TouchpadOff&lt;/span&gt;&lt;span class="o"&gt;=
 other keys' name? just &lt;code&gt;xbindkeys -k&lt;/code&gt;...&lt;/p&gt;
 &lt;h2&gt;Screenshot&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt="Touchpad on" src="./images/shell/touchpad/touchpadon.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Touchpad off" src="./images/shell/touchpad/touchpadoff.png" /&gt;&lt;/p&gt;</summary><category term="Touchpad"></category><category term="shell"></category></entry><entry><title>Let's go</title><link href="zuckonit.github.com/letsgo.html" rel="alternate"></link><updated>2013-02-05T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-02-05:letsgo.html</id><summary type="html">&lt;pre&gt;
+&lt;p&gt;&lt;img alt="Touchpad on" src="/static/images/shell/touchpad/touchpadon.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Touchpad off" src="/static/images/shell/touchpad/touchpadoff.png" /&gt;&lt;/p&gt;</summary><category term="Touchpad"></category><category term="shell"></category></entry><entry><title>Let's go</title><link href="zuckonit.github.com/letsgo.html" rel="alternate"></link><updated>2013-02-05T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2013-02-05:letsgo.html</id><summary type="html">&lt;pre&gt;
 &lt;embed src="http://player.opengg.me/player.php/sid/XMTY4Mzk5NTc2/v.swf"
 quality="high" width="480" height="400" align="middle"
 allowScriptAccess="sameDomain" allowFullscreen="true"
@@ -56,7 +56,7 @@ Seems that there's a little trouble under windows, but I am not fucking care abo
 &lt;/ul&gt;
 &lt;h2&gt;Screenshots (weather only)&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;img alt="weatherlike" src="./images/python/libnotify/weather.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="weatherlike" src="/static/images/python/libnotify/weather.png" /&gt;&lt;/p&gt;
 &lt;h2&gt;Code of main part&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
@@ -206,7 +206,7 @@ open such link in your browser:  &lt;/p&gt;
 
 
 &lt;p&gt;you will see:&lt;br /&gt;
-&lt;img alt="apache" src="./images/linux/lamp/test_apache.png" /&gt;&lt;/p&gt;
+&lt;img alt="apache" src="/static/images/linux/lamp/test_apache.png" /&gt;&lt;/p&gt;
 &lt;p&gt;*Test php
 add test.php  &lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;    &lt;span class="nx"&gt;sudo&lt;/span&gt; &lt;span class="nx"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="nb"&gt;phpinfo&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;/var/www/test.php&lt;/span&gt;
@@ -224,7 +224,7 @@ add test.php  &lt;/p&gt;
 
 
 &lt;p&gt;you will see:&lt;br /&gt;
-&lt;img alt="php" src="./images/linux/lamp/test_php.png" /&gt;&lt;/p&gt;
+&lt;img alt="php" src="/static/images/linux/lamp/test_php.png" /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Then, just enjoy it:)  &lt;/p&gt;</summary><category term="ubuntu"></category><category term="lamp"></category></entry><entry><title>Send Your Note to Your Gmail</title><link href="zuckonit.github.com/gnote.vim.html" rel="alternate"></link><updated>2012-10-21T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-10-21:gnote.vim.html</id><summary type="html">&lt;h2&gt;why I write such vim plugin&lt;/h2&gt;
 &lt;hr /&gt;
@@ -425,7 +425,7 @@ touch &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt
 反正会写shell脚本，当练练手了，果断有了这个shell版本.  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;Screenshot&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="Screenshot" src="./images/shell/are_you_online/conky.png" /&gt;&lt;/p&gt;</summary><category term="shell"></category><category term="conky"></category></entry><entry><title>++age</title><link href="zuckonit.github.com/birthday.html" rel="alternate"></link><updated>2012-09-24T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-24:birthday.html</id><summary type="html">&lt;h1&gt;Today is my birthday&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="/static/images/shell/are_you_online/conky.png" /&gt;&lt;/p&gt;</summary><category term="shell"></category><category term="conky"></category></entry><entry><title>++age</title><link href="zuckonit.github.com/birthday.html" rel="alternate"></link><updated>2012-09-24T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-09-24:birthday.html</id><summary type="html">&lt;h1&gt;Today is my birthday&lt;/h1&gt;
 &lt;h2&gt;&lt;code&gt;++age&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;人生的十字路口渐渐到来。人越大，责任越多，烦恼越多，需要考虑的事情也越来越多。&lt;br /&gt;
 需要有足够的勇气走下去，Eerything will be ok！！！  &lt;/p&gt;
@@ -434,7 +434,7 @@ touch &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt
 &lt;hr /&gt;
 &lt;p&gt;&lt;img alt="Monkey" src="./images/misc/monkey/monkey.png" /&gt;&lt;/p&gt;</summary><category term="monkey"></category><category term="brother"></category></entry><entry><title>shell学习笔记</title><link href="zuckonit.github.com/shell_note.html" rel="alternate"></link><updated>2012-08-30T09:58:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-30:shell_note.html</id><summary type="html">&lt;h2&gt;Shell 笔记&lt;/h2&gt;
 &lt;p&gt;Where there is a shell , there is a way!!&lt;br /&gt;
-&lt;img alt="Cool" src="./images/shell/shell_note/longmao.png" /&gt;  &lt;/p&gt;
+&lt;img alt="Cool" src="/static/images/shell/shell_note/longmao.png" /&gt;  &lt;/p&gt;
 &lt;hr /&gt;</summary><category term="shell"></category><category term="note"></category></entry><entry><title>定制个人linux</title><link href="zuckonit.github.com/linux_custom.html" rel="alternate"></link><updated>2012-08-29T22:26:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-29:linux_custom.html</id><summary type="html">&lt;p&gt;不知道你有没有这样的苦恼，每次重装linux系统的时候，又要把以前的&lt;br /&gt;
 软件重装一遍。又是换源，又是更新。各种蛋疼。说到这里，你大概猜到这篇&lt;br /&gt;
 博客专门用来治疗这种蛋疼到。好了,不说废话了，直接看下面方法。  &lt;/p&gt;
@@ -450,12 +450,12 @@ touch &lt;span class="nv"&gt;$file_offline&lt;/span&gt; &amp;amp;&amp;gt;&amp;gt
 &lt;p&gt;&lt;em&gt;定制前最好把系统多余到软件包什么的都删了，需要到软件保留。&lt;/em&gt;&lt;br /&gt;
 直接看截图吧：&lt;br /&gt;
 &lt;img alt="打开Remastersys" src="./images/linux/linux_custom/open.png" /&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="选择" src="./images/linux/linux_custom/choose.png" /&gt;  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="确定" src="./images/linux/linux_custom/sure.png" /&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="选择" src="/static/images/linux/linux_custom/choose.png" /&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="确定" src="/static/images/linux/linux_custom/sure.png" /&gt;  &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;最后生成到iso文件在/home/remastersys/remastersys 里面&lt;br /&gt;
 拷贝出来后，可清理。&lt;br /&gt;
-&lt;img alt="清理" src="./images/linux/linux_custom/clean.png" /&gt;  &lt;/p&gt;</summary><category term="linux"></category><category term="定制"></category></entry><entry><title>publish blog with github+markdown+pelican</title><link href="zuckonit.github.com/github_markdown_pelican.html" rel="alternate"></link><updated>2012-08-27T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-27:github_markdown_pelican.html</id><summary type="html">&lt;h1&gt;简单的介绍下这三个"工具"&lt;/h1&gt;
+&lt;img alt="清理" src="/static/images/linux/linux_custom/clean.png" /&gt;  &lt;/p&gt;</summary><category term="linux"></category><category term="定制"></category></entry><entry><title>publish blog with github+markdown+pelican</title><link href="zuckonit.github.com/github_markdown_pelican.html" rel="alternate"></link><updated>2012-08-27T00:00:00+08:00</updated><author><name>Mocker</name></author><id>tag:zuckonit.github.com,2012-08-27:github_markdown_pelican.html</id><summary type="html">&lt;h1&gt;简单的介绍下这三个"工具"&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;h2&gt;github page&lt;/h2&gt;
 &lt;p&gt;简单来说github page就是github的一个附件功能，用来搭建个人博客的功能。&lt;br /&gt;
