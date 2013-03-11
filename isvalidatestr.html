@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="">
+<head>
+    <link rel="shortcut icon" href="/static/favicon.png" />
+    <meta charset="utf-8"/>
+    <title>An application of stack - When I'm gone</title>
+    <meta name="author" content="Mocker">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700,400|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        
+    <link href="./" type="application/atom+xml" rel="alternate" title="When I'm gone ATOM Feed" />
+    </head>
+
+<body>
+    <header class="clearfix" role="banner">
+        <div class="wrapper">
+            <h1 class="huge"><a href=".">When I'm gone</a></h1>
+        </div>
+    </header>
+
+    <div role="main" class="content clearfix">	
+	<article>
+		<div class="post wrapper">
+			<h1>An application of stack</h1>
+			<h2>Description</h2>
+<hr />
+<p>Input a string called A, characters '(', ')', '[', ']' and others may be contained.<br />
+If:<br />
+<em> '(', '[' are at the left of ')', ']'<br />
+</em> '(',')','[',']' are in pairs<br />
+then we call such string valid<br />
+Now, please write a program to judge whether your inputting string is valid.  </p>
+<h2>Analysis</h2>
+<hr />
+<p>If you are familar with stack structure, it is easy to solve this problem.<br />
+<em> create a stack<br />
+</em> define double counter:m = 0, n = 0<br />
+<em> when meeting '[' or '(', then push stack. and m++,n++<br />
+</em> when meeting ']' or ')', then get the top of stack, if equal '[' or '(' then pop stack, and m--, n--, else return false<br />
+* if m == 0 &amp;&amp; n== 0 then return true  </p>
+<h2>Snippet</h2>
+<hr />
+<div class="codehilite"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="cp">#ifndef SIZE</span>
+<span class="cp">#define SIZE 100</span>
+<span class="cp">#endif</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="kt">stack_t</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="n">ch</span><span class="p">[</span><span class="n">SIZE</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">top</span><span class="p">;</span>
+<span class="p">}</span><span class="n">STACK</span> <span class="cm">/* optional variable list */</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">init_stack</span><span class="p">(</span><span class="n">STACK</span> <span class="o">*</span><span class="n">st</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">st</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">is_stack_empty</span><span class="p">(</span><span class="n">STACK</span> <span class="o">*</span><span class="n">st</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">is_stack_full</span><span class="p">(</span><span class="n">STACK</span> <span class="o">*</span><span class="n">st</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="p">(</span><span class="n">SIZE</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">char</span> <span class="nf">get_stack_top</span><span class="p">(</span><span class="n">STACK</span> <span class="o">*</span><span class="n">st</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_stack_empty</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">st</span><span class="o">-&gt;</span><span class="n">ch</span><span class="p">[</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">push_stack</span><span class="p">(</span><span class="n">STACK</span> <span class="o">*</span><span class="n">st</span><span class="p">,</span> <span class="kt">char</span> <span class="n">ch</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_stack_full</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">st</span><span class="o">-&gt;</span><span class="n">ch</span><span class="p">[</span><span class="o">++</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">ch</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">pop_stack</span><span class="p">(</span><span class="n">STACK</span> <span class="o">*</span><span class="n">st</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">is_stack_empty</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">st</span><span class="o">-&gt;</span><span class="n">ch</span><span class="p">[</span><span class="n">st</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">--</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">judge_stack</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">char</span>  <span class="o">*</span><span class="n">p</span>  <span class="o">=</span> <span class="n">str</span><span class="p">;</span>
+    <span class="n">STACK</span> <span class="o">*</span><span class="n">st</span> <span class="o">=</span> <span class="p">(</span><span class="n">STACK</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">STACK</span><span class="p">));</span>
+    <span class="kt">int</span> <span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">init_stack</span><span class="p">(</span><span class="n">st</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">&#39;(&#39;</span>:
+                <span class="n">push_stack</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+                <span class="n">m</span><span class="o">++</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">&#39;[&#39;</span>:
+                <span class="n">push_stack</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+                <span class="n">n</span><span class="o">++</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">&#39;)&#39;</span>:
+                <span class="k">if</span> <span class="p">(</span><span class="n">get_stack_top</span><span class="p">(</span><span class="n">st</span><span class="p">)</span> <span class="o">==</span> <span class="sc">&#39;(&#39;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">pop_stack</span><span class="p">(</span><span class="n">st</span><span class="p">);</span>
+                    <span class="n">m</span><span class="o">--</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">&#39;]&#39;</span>:
+                <span class="k">if</span> <span class="p">(</span><span class="n">get_stack_top</span><span class="p">(</span><span class="n">st</span><span class="p">)</span> <span class="o">==</span> <span class="sc">&#39;[&#39;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">pop_stack</span><span class="p">(</span><span class="n">st</span><span class="p">);</span>
+                    <span class="n">n</span><span class="o">--</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="nl">default:</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">p</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">n</span> <span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span>  <span class="o">=</span> <span class="s">&quot;(((-1)))&quot;</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">judge_stack</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+			
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						
+						<div class="comments">
+			<h2>Comments !</h2>
+			    <div id="disqus_thread"></div>
+			    <script type="text/javascript">
+			       var disqus_identifier = "isvalidatestr.html";
+			       (function() {
+			       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			       dsq.src = 'http://binlife.disqus.com/embed.js';
+			       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			      })();
+			    </script>
+			</div>
+						
+		</div>
+	
+	<div class="meta wrapper">
+	<time datetime="2013-03-11T00:00:00" pubdate>Mar 11 2013</time>
+	<ul class="tag clearfix">
+		<li><a href="./category/C.html">C</a></li>
+			<li><a href="./tag/structure.html">structure</a></li>
+			<li><a href="./tag/C.html">C</a></li>
+		</ul>
+	</div>	</article>	
+</div>
+
+
+<footer class="clearfix">
+    <div class="wrapper pages">
+        <ul class="nav">
+                    <li><a href="./archives.html">Archive</a></li>
+        </ul>
+    </div>
+
+    <div class="copy wrapper">
+        <!--modified by Mocker-->
+        <p>        <a href="http://weibo.com/zuckonit"><img src="/static/contacts/Weibo.png" title="Weibo"/></a>
+                <a href="https://github.com/Zuckonit"><img src="/static/contacts/Github.png" title="Github"/></a>
+                <a href="https://plus.google.com/u/0/111312737570320393101"><img src="/static/contacts/G+.png" title="G+"/></a>
+                <a href="https://www.facebook.com/zuckor.siner"><img src="/static/contacts/Facebook.png" title="Facebook"/></a>
+        </p>
+        <p role="contentinfo">© 2012 Mocker<br>
+        Proudly powered by @Zuckonit</a>.</p>
+    </div>
+</footer>
+
+    <script>
+      var _gaq=[['_setAccount',''],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+</body>
+</html>
